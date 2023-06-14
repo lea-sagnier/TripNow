@@ -75,9 +75,6 @@ const App: React.FC = () => {
           <Route path="/user">
             <User />
           </Route>
-          <Route exact path="/register">
-              <Register />
-            </Route>
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>

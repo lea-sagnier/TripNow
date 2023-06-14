@@ -12,8 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, db } from "../../firebaseConfig";
-import { addDoc, collection } from "firebase/firestore/lite";
+import { auth } from "../../firebaseConfig";
 
 const Register: React.FC = () => {
     const [email, setEmail] = useState("");
@@ -31,10 +30,10 @@ const Register: React.FC = () => {
                 const user = userCredential.user;
                 updateProfile(user, { displayName: displayName })
                 .then(() => {
-                    console.log("Numéro de téléphone ajouté avec succès");
+                    console.log("Pseudo ajouté avec succès");
                 })
                 .catch((error) => {
-                    console.error("Erreur lors de l'ajout du numéro de téléphone", error);
+                    console.error("Erreur lors de l'ajout du pseudo", error);
                 });
                 console.log(user)
               })
