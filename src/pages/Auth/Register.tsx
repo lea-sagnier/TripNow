@@ -12,8 +12,7 @@ import {
 import { Link } from "react-router-dom";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from "../../firebaseConfig";
-import { doc, setDoc } from "firebase/firestore/lite";
+import { auth } from "../../firebaseConfig";
 
 const Register: React.FC = () => {
     const [lastname, setLastname]= useState("");
