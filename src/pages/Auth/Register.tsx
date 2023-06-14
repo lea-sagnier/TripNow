@@ -11,25 +11,31 @@ import {
 } from "@ionic/react";
 import { Link } from "react-router-dom";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebaseConfig";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth, db } from "../../firebaseConfig";
+import { addDoc, collection } from "firebase/firestore/lite";
 
 const Register: React.FC = () => {
-    const [lastname, setLastname]= useState("");
-    const [firstname, setFirstname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [cpassword, setCPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
     const [showCPassword, setShowCPassword] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
-   
+    const [displayName, setDisplayName] = useState("");
 
     function register() {
         if (password === cpassword) {
             createUserWithEmailAndPassword(auth, email, password)
               .then((userCredential) => {
                 const user = userCredential.user;
+                updateProfile(user, { displayName: displayName })
+                .then(() => {
+                    console.log("Numéro de téléphone ajouté avec succès");
+                })
+                .catch((error) => {
+                    console.error("Erreur lors de l'ajout du numéro de téléphone", error);
+                });
                 console.log(user)
               })
               .catch((error) => {
@@ -53,13 +59,9 @@ const Register: React.FC = () => {
                     register();
                     }}
                 >
-                    <IonLabel>Nom</IonLabel>
-                    <IonInput 
-                        onIonChange={(e: any) => setLastname(e.target.value)}
-                    />
-                    <IonLabel>Prénom</IonLabel>
-                    <IonInput 
-                        onIonChange={(e: any) => setFirstname(e.target.value)}
+                    <IonLabel>Pseudo</IonLabel>
+                    <IonInput
+                        onIonChange={(e: any) => setDisplayName(e.target.value)}
                     />
                     <IonLabel>Votre email</IonLabel>
                     <IonInput
