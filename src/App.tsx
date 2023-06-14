@@ -36,7 +36,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import { useCurrentUser } from './hooks/UserHook';
-import Register from './pages/Register';
+import Register from './pages/Auth/Register';
 
 setupIonicReact();
 
