@@ -15,6 +15,7 @@ import Home from './pages/Home';
 import Tab2 from './pages/Tab2';
 import User from './pages/User/User';
 import Login from './pages/Auth/Login';
+import ResetPassword from "./pages/Auth/ResetPassword";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,10 +51,10 @@ const App: React.FC = () => {
             </Route>
             {/* <Route path="/register">
               <Register />
-            </Route>
+            </Route>*/}
             <Route path="/resetPassword">
               <ResetPassword />
-            </Route> */}
+            </Route>
           </IonRouterOutlet>
         </IonReactRouter>
       </IonApp>
