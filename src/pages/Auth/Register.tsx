@@ -9,9 +9,9 @@ import {
   IonPage,
   
 } from "@ionic/react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile,  sendEmailVerification } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 
 const Register: React.FC = () => {
@@ -23,14 +23,20 @@ const Register: React.FC = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [displayName, setDisplayName] = useState("");
 
+    const history = useHistory();
+
     function register() {
         if (password === cpassword) {
             createUserWithEmailAndPassword(auth, email, password)
-              .then((userCredential) => {
+              .then((userCredential) => {      
                 const user = userCredential.user;
                 updateProfile(user, { displayName: displayName })
                 .then(() => {
                     console.log("Pseudo ajouté avec succès");
+                    sendEmailVerification(user)
+                        .then(() => {
+                            history.push('/verifyEmail')
+                        }).catch((err) => alert(err.message))
                 })
                 .catch((error) => {
                     console.error("Erreur lors de l'ajout du pseudo", error);

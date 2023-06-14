@@ -37,6 +37,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import { useCurrentUser } from './hooks/UserHook';
 import Register from './pages/Auth/Register';
+import { VerifyEmail } from './pages/Auth/VerifyEmail';
 
 setupIonicReact();
 
@@ -68,6 +69,9 @@ const App: React.FC = () => {
         <IonRouterOutlet>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route path="/verifyEmail">
+            <VerifyEmail />
           </Route>
           <Route exact path="/tab2">
             <Tab2 />
