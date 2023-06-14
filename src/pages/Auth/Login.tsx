@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
-import './style.css';
+import '../style.css';
 
 const Home: React.FC = () => {
   const [email, setEmail] = useState("");
