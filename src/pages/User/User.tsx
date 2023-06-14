@@ -2,6 +2,7 @@ import { IonContent,IonButton, IonHeader, IonPage, IonTitle, IonToolbar } from '
 import '../style.css';
 import { auth } from '../../firebaseConfig';
 import { useHistory } from 'react-router-dom';
+import UserEmail from '../../components/UserEmail';
 
 const User: React.FC = () => {
   const navigate = useHistory();
@@ -26,11 +27,8 @@ const User: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">User</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+        <UserEmail/>
+        <IonButton href="./HistoryPage">Historique</IonButton>
         <IonButton onClick={logOut}>Se déconnecter</IonButton>
       </IonContent>
     </IonPage>
