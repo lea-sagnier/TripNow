@@ -32,7 +32,6 @@ const Register: React.FC = () => {
               .then((userCredential) => {
                 const user = userCredential.user;
                 console.log(user)
-                addUserRegister(user);
               })
               .catch((error) => {
                 console.error(error);
@@ -41,18 +40,6 @@ const Register: React.FC = () => {
         }
         else {
             setErrorMessage("Le mot de passe de confirmation ne correspond pas");
-        }
-    }
-
-    async function addUserRegister(user: any) {
-        try {
-            if (user) {
-                await setDoc(doc(db, "users", user.uid), {
-                    email,
-                });
-            }
-        } catch (e) {
-            console.error("Error adding document: ", e);
         }
     }
 
