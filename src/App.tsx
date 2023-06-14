@@ -36,6 +36,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import { useCurrentUser } from './hooks/UserHook';
+import Register from './pages/Auth/Register';
 
 setupIonicReact();
 
@@ -49,9 +50,9 @@ const App: React.FC = () => {
             <Route exact path="/">
               <Login />
             </Route>
-            {/* <Route path="/register">
+             <Route path="/register">
               <Register />
-            </Route>*/}
+            </Route>
             <Route path="/resetPassword">
               <ResetPassword />
             </Route>
