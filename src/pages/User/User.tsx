@@ -1,8 +1,23 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../../components/ExploreContainer';
+import { IonContent,IonButton, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import '../style.css';
+import { auth } from '../../firebaseConfig';
+import { useHistory } from 'react-router-dom';
 
 const User: React.FC = () => {
+  const navigate = useHistory();
+
+  function logOut() {
+    auth
+      .signOut()
+      .then(() => {
+        alert("Vous avez été déconnecté avec succès");
+        navigate.push("/");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+  
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +31,7 @@ const User: React.FC = () => {
             <IonTitle size="large">User</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <IonButton onClick={logOut}>Se déconnecter</IonButton>
       </IonContent>
     </IonPage>
   );
