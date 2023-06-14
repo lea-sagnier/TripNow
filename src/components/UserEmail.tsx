@@ -7,9 +7,8 @@ const UserEmail = () => {
   
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      if (user && user.displayName) {
-        setUserDisplayName(user.displayName)
-      } else if(user && user.email){
+      if (user && user.displayName && user.email) {
+        setUserDisplayName(user.displayName);
         setUserEmail(user.email);
       }else{
         setUserEmail("");
@@ -19,7 +18,7 @@ const UserEmail = () => {
     return () => unsubscribe();
   }, []);
 
-  return userEmail ? <p>{userEmail}</p> : null;
+  return userDisplayName ? <p>{userDisplayName}</p> : <p>{userEmail}</p>;
 };
 
 export default UserEmail;
