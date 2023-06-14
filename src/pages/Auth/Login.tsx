@@ -36,7 +36,8 @@ const Home: React.FC = () => {
       <IonHeader></IonHeader>
       <IonContent>
         <section className="log-home">
-          <h1 className="title-log">Bienvenue</h1>
+          <h1 className="title-log">Bonjour</h1>
+          <h2>Connectez vous pour découvrir toutes nos fonctionnalités</h2>
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -63,10 +64,11 @@ const Home: React.FC = () => {
             </div>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-            <IonButton type="submit">Se connecter</IonButton>
             <Link to="/resetPassword">Mot de passe oublié ?</Link>
+            <IonButton type="submit">Se connecter</IonButton>
           </form>
-          <Link to="/register">S'inscrir</Link>
+          <p>Vous voulez nous rejoindre ?</p>
+          <Link to="/register">S'inscrire</Link>
         </section>
       </IonContent>
     </IonPage>
