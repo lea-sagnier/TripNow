@@ -14,7 +14,7 @@ import { ellipse, square, triangle } from 'ionicons/icons';
 import Home from './pages/Home';
 import Tab2 from './pages/Tab2';
 import User from './pages/User/User';
-import Login from './pages/Connexion/Login';
+import Login from './pages/Auth/Login';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -80,7 +80,7 @@ const App: React.FC = () => {
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
             <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon aria-hidden="true" icon={ellipse} />
@@ -88,7 +88,7 @@ const App: React.FC = () => {
           </IonTabButton>
           <IonTabButton tab="user" href="/user">
             <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonLabel>User</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
