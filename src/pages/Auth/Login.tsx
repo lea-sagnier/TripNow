@@ -35,8 +35,8 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader></IonHeader>
       <IonContent>
-        <section className="log-home">
-          <h1 className="title-log">Bonjour</h1>
+        <section>
+          <h1>Bonjour</h1>
           <h2>Connectez vous pour découvrir toutes nos fonctionnalités</h2>
           <form
             onSubmit={(e) => {
