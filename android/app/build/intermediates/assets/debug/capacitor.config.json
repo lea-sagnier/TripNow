@@ -1,0 +1,8 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "TripNow",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}
