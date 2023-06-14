@@ -7,7 +7,10 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  setupIonicReact
+  setupIonicReact,
+  IonToolbar, 
+  IonHeader,
+  IonTitle
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
@@ -16,6 +19,7 @@ import Tab2 from './pages/Tab2';
 import User from './pages/User/User';
 import Login from './pages/Auth/Login';
 import ResetPassword from "./pages/Auth/ResetPassword";
+import HistoryPage from './pages/User/HistoryPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -62,6 +66,11 @@ const App: React.FC = () => {
   }
   return (
   <IonApp>
+    <IonHeader>
+      <IonToolbar>
+        <IonTitle>TripNow</IonTitle>
+      </IonToolbar>
+    </IonHeader>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
@@ -73,6 +82,9 @@ const App: React.FC = () => {
           </Route>
           <Route path="/user">
             <User />
+          </Route>
+          <Route path="/historyPage">
+            <HistoryPage />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
