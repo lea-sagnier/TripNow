@@ -8,7 +8,7 @@ import {
   IonIcon,
 } from "@ionic/react";
 import { Link } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { eyeOffOutline, eyeOutline } from "ionicons/icons";
 import '../style.css';
@@ -18,7 +18,8 @@ const Home: React.FC = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
+  const providerGoogle = new GoogleAuthProvider();
+  
   function logIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -28,6 +29,10 @@ const Home: React.FC = () => {
         console.error(error);
         setErrorMessage("Adresse e-mail ou mot de passe incorrect");
       });
+  }
+
+  function signInWithGoogle() {
+    signInWithRedirect(auth, providerGoogle);
   }
 
   return (
@@ -67,6 +72,9 @@ const Home: React.FC = () => {
             <Link to="/resetPassword">Mot de passe oublié ?</Link>
             <IonButton type="submit">Se connecter</IonButton>
           </form>
+          <IonButton onClick={signInWithGoogle} expand="full" type="submit">
+            Se connecter avec google
+          </IonButton>
           <p>Vous voulez nous rejoindre ?</p>
           <Link to="/register">S'inscrire</Link>
         </section>
