@@ -20,11 +20,9 @@ body {
     width: 100%;
     overflow-y: hidden;
 }
-.ion-page{
+section{
     padding: 1rem;
 }
-
-
 
 /* Loader */
 
@@ -37,7 +35,6 @@ body {
 }
 
 /* forms */
-
 form{
     display: flex;
     flex-direction: column;
@@ -49,7 +46,10 @@ ion-button{
 }
 
 /* password login */
-.password-input {
+ion-input{
+    border: var(--border) 1px solid;
+}
+.input-icon {
     position: relative
 }
 
