@@ -59,58 +59,57 @@ const Login: React.FC = () => {
           <IonHeader></IonHeader>
           <IonContent>
             <section>
-            <h1>Se connecter</h1>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                logIn();
-              }}
-            >
-              <div>
-                <IonLabel position="stacked">Adresse mail</IonLabel>
-                <div className="input-icon">
-                <IonInput
-                  name="email"
-                  placeholder="exemple@gmail.com"
-                  onIonChange={(e: any) => setEmail(e.target.value)}
-                />
-                <IonIcon
-                    className="password-toggle-icon"
-                    icon={mailOutline}
-                />
-                </div>
-                <IonLabel position="stacked">Mot de passe</IonLabel>
-                <div className="input-icon">
-                  <IonInput
-                    name="password"
-                    type={showPassword ? "text" : "password"}
-                    placeholder="Mot de passe"
-                    onIonChange={(e: any) => setPassword(e.target.value)}
-                  />
-                  <IonIcon
-                    className="password-toggle-icon"
-                    icon={showPassword ? eyeOffOutline : eyeOutline}
-                    onClick={() => setShowPassword(!showPassword)}
-                  />
-                </div>
-                {errorMessage && (
-                  <p className="error-message">{errorMessage}</p>
-                )}
+              <h1>Se connecter</h1>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  logIn();
+                }}
+              >
+                <div>
+                  <IonLabel position="stacked">Adresse mail</IonLabel>
+                  <div className="input-icon">
+                    <IonInput
+                      name="email"
+                      placeholder="exemple@gmail.com"
+                      onIonChange={(e: any) => setEmail(e.target.value)}
+                    />
+                    <IonIcon
+                      className="password-toggle-icon"
+                      icon={mailOutline}
+                    />
+                  </div>
+                  <IonLabel position="stacked">Mot de passe</IonLabel>
+                  <div className="input-icon">
+                    <IonInput
+                      name="password"
+                      type={showPassword ? "text" : "password"}
+                      placeholder="Mot de passe"
+                      onIonChange={(e: any) => setPassword(e.target.value)}
+                    />
+                    <IonIcon
+                      className="password-toggle-icon"
+                      icon={showPassword ? eyeOffOutline : eyeOutline}
+                      onClick={() => setShowPassword(!showPassword)}
+                    />
+                  </div>
+                  {errorMessage && (
+                    <p className="error-message">{errorMessage}</p>
+                  )}
 
-                <Link to="/resetPassword">Mot de passe oublié ?</Link>
-              </div>
+                  <Link to="/resetPassword">Mot de passe oublié ?</Link>
+                </div>
 
-              <IonButton type="submit">Se connecter</IonButton>
-            </form>
-            <IonButton fill="clear" href="/register">
-              S'inscrire
-            </IonButton>
+                <IonButton type="submit">Se connecter</IonButton>
+              </form>
+              <IonButton fill="clear" href="/register">
+                S'inscrire
+              </IonButton>
             </section>
           </IonContent>
         </IonPage>
       )}
     </div>
-    
   );
 };
 
