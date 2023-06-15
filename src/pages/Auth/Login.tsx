@@ -6,6 +6,7 @@ import {
   IonInput,
   IonPage,
   IonIcon,
+  IonLabel,
 } from "@ionic/react";
 import { Link } from "react-router-dom";
 import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
@@ -14,7 +15,7 @@ import { eyeOffOutline, eyeOutline } from "ionicons/icons";
 import '../style.css';
 import Loader from "../../components/loader";
 
-const Home: React.FC = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -52,44 +53,47 @@ const Home: React.FC = () => {
         <IonPage>
         <IonHeader></IonHeader>
         <IonContent>
-          <section>
-            <h1>Bonjour</h1>
-            <h2>Connectez vous pour découvrir toutes nos fonctionnalités</h2>
+            <h1>Se connecter</h1>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
                 logIn();
               }}
             >
-              <IonInput
-                name="email"
-                placeholder="Email"
-                onIonChange={(e: any) => setEmail(e.target.value)}
-              />
-              <div className="password-input">
+              <div>
+                <IonLabel position="stacked">
+                  Adresse mail
+                </IonLabel>
                 <IonInput
-                  name="password"
-                  type={showPassword ? "text" : "password"}
-                  placeholder="Password"
-                  onIonChange={(e: any) => setPassword(e.target.value)}
+                  name="email"
+                  placeholder="exemple@gmail.com"
+                  onIonChange={(e: any) => setEmail(e.target.value)}
                 />
-                <IonIcon
-                  className="password-toggle-icon"
-                  icon={showPassword ? eyeOffOutline : eyeOutline}
-                  onClick={() => setShowPassword(!showPassword)}
-                />
-              </div>
+                <IonLabel position="stacked">
+                  Mot de passe
+                </IonLabel>
+                <div className="password-input">
+                  <IonInput
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Mot de passe"
+                    onIonChange={(e: any) => setPassword(e.target.value)}
+                  />
+                  <IonIcon
+                    className="password-toggle-icon"
+                    icon={showPassword ? eyeOffOutline : eyeOutline}
+                    onClick={() => setShowPassword(!showPassword)}
+                  />
+                </div>
               {errorMessage && <p className="error-message">{errorMessage}</p>}
   
               <Link to="/resetPassword">Mot de passe oublié ?</Link>
+
+              </div>
+              
               <IonButton type="submit">Se connecter</IonButton>
             </form>
-            <IonButton onClick={signInWithGoogle} expand="full" type="submit">
-              Se connecter avec google
-            </IonButton>
-            <p>Vous voulez nous rejoindre ?</p>
-            <Link to="/register">S'inscrire</Link>
-          </section>
+            <IonButton fill="clear" href="/register">S'inscrire</IonButton>
         </IonContent>
       </IonPage>  
       )}
@@ -97,4 +101,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Login;

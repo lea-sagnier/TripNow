@@ -1,11 +1,12 @@
 *{
+    --ion-color-primary: var(--style-blue); /* Couleur primaire */
     --style-blue :#1B9AAA;
     --white: #ffffff ;
     --black: #001011;
     --dark-slate-grey: #304748;
     --border: #f4f4f4;
 }
-html, body{
+html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +15,16 @@ html, body{
 body {
     font-family: sans-serif; 
     font-size: 100%;
+    color: var(--black);
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
 }
+.ion-page{
+    padding: 1rem;
+}
+
+
 
 /* Loader */
 
@@ -25,7 +35,18 @@ body {
     align-items: center;
     height: 100vh;
 }
-  
+
+/* forms */
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+}
+ion-button{
+    width: 100%;
+}
 
 /* password login */
 .password-input {
@@ -45,3 +66,5 @@ body {
     color: red;
     font-size: 0.8rem;
 }
+
+
