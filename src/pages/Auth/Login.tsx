@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   IonButton,
   IonContent,
@@ -6,20 +6,28 @@ import {
   IonInput,
   IonPage,
   IonIcon,
+  IonLabel,
 } from "@ionic/react";
 import { Link } from "react-router-dom";
-import { signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInWithRedirect } from "firebase/auth";
+import {
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithRedirect,
+} from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import { eyeOffOutline, eyeOutline } from "ionicons/icons";
-import '../style.css';
+import { eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
+import "../style.css";
+import Loader from "../../components/loader";
 
-const Home: React.FC = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const providerGoogle = new GoogleAuthProvider();
-  
+  const [loading, setLoading] = useState(true);
+
   function logIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -35,52 +43,75 @@ const Home: React.FC = () => {
     signInWithRedirect(auth, providerGoogle);
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false); // Définissez loading sur false une fois que la tâche est terminée
+    }, 2000);
+  }, []);
+
   return (
     //Page d'accueil
-    <IonPage>
-      <IonHeader></IonHeader>
-      <IonContent>
-        <section>
-          <h1>Bonjour</h1>
-          <h2>Connectez vous pour découvrir toutes nos fonctionnalités</h2>
-          <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              logIn();
-            }}
-          >
-            <IonInput
-              name="email"
-              placeholder="Email"
-              onIonChange={(e: any) => setEmail(e.target.value)}
-            />
-            <div className="password-input">
-              <IonInput
-                name="password"
-                type={showPassword ? "text" : "password"}
-                placeholder="Password"
-                onIonChange={(e: any) => setPassword(e.target.value)}
-              />
-              <IonIcon
-                className="password-toggle-icon"
-                icon={showPassword ? eyeOffOutline : eyeOutline}
-                onClick={() => setShowPassword(!showPassword)}
-              />
-            </div>
-            {errorMessage && <p className="error-message">{errorMessage}</p>}
+    <div>
+      {loading ? (
+        <Loader /> // Affichez le Loader si loading est true
+      ) : (
+        <IonPage>
+          <IonHeader></IonHeader>
+          <IonContent>
+            <section>
+            <h1>Se connecter</h1>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                logIn();
+              }}
+            >
+              <div>
+                <IonLabel position="stacked">Adresse mail</IonLabel>
+                <div className="input-icon">
+                <IonInput
+                  name="email"
+                  placeholder="exemple@gmail.com"
+                  onIonChange={(e: any) => setEmail(e.target.value)}
+                />
+                <IonIcon
+                    className="password-toggle-icon"
+                    icon={mailOutline}
+                />
+                </div>
+                <IonLabel position="stacked">Mot de passe</IonLabel>
+                <div className="input-icon">
+                  <IonInput
+                    name="password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Mot de passe"
+                    onIonChange={(e: any) => setPassword(e.target.value)}
+                  />
+                  <IonIcon
+                    className="password-toggle-icon"
+                    icon={showPassword ? eyeOffOutline : eyeOutline}
+                    onClick={() => setShowPassword(!showPassword)}
+                  />
+                </div>
+                {errorMessage && (
+                  <p className="error-message">{errorMessage}</p>
+                )}
 
-            <Link to="/resetPassword">Mot de passe oublié ?</Link>
-            <IonButton type="submit">Se connecter</IonButton>
-          </form>
-          <IonButton onClick={signInWithGoogle} expand="full" type="submit">
-            Se connecter avec google
-          </IonButton>
-          <p>Vous voulez nous rejoindre ?</p>
-          <Link to="/register">S'inscrire</Link>
-        </section>
-      </IonContent>
-    </IonPage>
+                <Link to="/resetPassword">Mot de passe oublié ?</Link>
+              </div>
+
+              <IonButton type="submit">Se connecter</IonButton>
+            </form>
+            <IonButton fill="clear" href="/register">
+              S'inscrire
+            </IonButton>
+            </section>
+          </IonContent>
+        </IonPage>
+      )}
+    </div>
+    
   );
 };
 
-export default Home;
+export default Login;
