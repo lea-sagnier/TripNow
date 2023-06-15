@@ -18,7 +18,7 @@ import {
 import { auth } from "../../firebaseConfig";
 import { eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
 import "../style.css";
-import Loader from "../../components/loader";
+import Loader from "../../components/Loader";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
