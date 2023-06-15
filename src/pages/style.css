@@ -70,7 +70,7 @@ ion-input{
 /* Search page */
 
 .titleInformation {
-    color: "#001011";
+    color: var(--black);
     font-weight: 600;
     font-size: 20px;
     text-align: center;
@@ -78,18 +78,18 @@ ion-input{
 }
 
 .informations {
-    --color: "#304748";
+    --color: var(--dark-slate-grey);
     font-weight: 400;
     font-size: 16px;
     text-align: center;
     margin: 1rem;
+    margin-bottom: 2rem;
 }
 
 .primaryButton {
-    --background: #1B9AAA;
     --border-radius: 8px;
     display: flex;
     margin: 0 auto;
-    width: 358px; 
+    width: 360px; 
     gap: 8px;
 }

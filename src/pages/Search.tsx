@@ -18,7 +18,7 @@ const Search: React.FC = () => {
         />
         <h1 className='titleInformation'>Recherche</h1>
         <p className='informations'>Différentes questions vous seront posées pour vous proposer des voyages correspondants.</p>
-        <IonButton  className='primaryButton' onClick={onNavigate}>Commencer la recherche</IonButton>
+        <IonButton  className='primaryButton' color={"primary"} onClick={onNavigate}>Commencer la recherche</IonButton>
       </IonContent>
     </IonPage>
   );
