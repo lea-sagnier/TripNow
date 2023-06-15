@@ -1,11 +1,41 @@
-import { IonContent,IonButton, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import '../style.css';
-import { auth } from '../../firebaseConfig';
-import { useHistory } from 'react-router-dom';
-import UserEmail from '../../components/UserEmail';
+import {
+  IonContent,
+  IonButton,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonInput,
+  IonText,
+} from "@ionic/react";
+import "../style.css";
+import { auth } from "../../firebaseConfig";
+import { useHistory } from "react-router-dom";
+import UserEmail from "../../components/UserEmail";
+import { updateProfile } from "firebase/auth";
+import { useCurrentUser } from "../../hooks/UserHook";
+import { useEffect, useState } from "react";
 
 const User: React.FC = () => {
   const navigate = useHistory();
+  const user = useCurrentUser();
+  const [displayName, setDisplayName] = useState(user?.displayName);
+
+  useEffect(() => {setDisplayName(user?.displayName)}, [user]);
+
+
+  function updateDisplayName() {
+    if (user !== null) {
+      updateProfile(user, { displayName: displayName })
+        .then(() => {
+          // See the UserRecord reference doc for the contents of userRecord.
+          console.log("Successfully updated user", displayName);
+        })
+        .catch((error: any) => {
+          console.log("Error updating user:", error);
+        });
+    }
+  }
 
   function logOut() {
     auth
@@ -18,7 +48,7 @@ const User: React.FC = () => {
         console.error(error);
       });
   }
-  
+
   return (
     <IonPage>
       <IonHeader>
@@ -27,7 +57,12 @@ const User: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <UserEmail/>
+        {/* <UserEmail /> */}
+        <IonText>{displayName}</IonText>
+
+        <IonInput onIonChange={(e: any) => setDisplayName(e.target.value)} />
+        <IonButton onClick={updateDisplayName}>Modifier mon pseudo</IonButton>
+        
         <IonButton href="./HistoryPage">Historique</IonButton>
         <IonButton onClick={logOut}>Se déconnecter</IonButton>
       </IonContent>
