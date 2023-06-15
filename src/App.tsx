@@ -15,7 +15,6 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Home from './pages/Home';
-import Tab2 from './pages/Tab2';
 import User from './pages/User/User';
 import Login from './pages/Auth/Login';
 import ResetPassword from "./pages/Auth/ResetPassword";
@@ -42,6 +41,7 @@ import './theme/variables.css';
 import { useCurrentUser } from './hooks/UserHook';
 import Register from './pages/Auth/Register';
 import { VerifyEmail } from './pages/Auth/VerifyEmail';
+import Search from './pages/Search';
 
 setupIonicReact();
 
@@ -82,8 +82,8 @@ const App: React.FC = () => {
           <Route path="/verifyEmail">
             <VerifyEmail />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/search">
+            <Search />
           </Route>
           <Route path="/user">
             <User />
@@ -100,9 +100,9 @@ const App: React.FC = () => {
             <IonIcon aria-hidden="true" icon={triangle} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="search" href="/search">
             <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Recherche</IonLabel>
           </IonTabButton>
           <IonTabButton tab="user" href="/user">
             <IonIcon aria-hidden="true" icon={square} />
