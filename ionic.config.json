@@ -1,5 +1,7 @@
 {
   "name": "TripNow",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react-vite"
 }
