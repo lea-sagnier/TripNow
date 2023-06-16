@@ -20,7 +20,9 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Paris.jpg",
+        "note": "4,2"
     },
     {
         "id": 1,
@@ -43,7 +45,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Nice.jpg",
+        "note": "4,1"
     },
     {
         "id": 2,
@@ -66,7 +70,9 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Lyon.jpg",
+        "note": "3,2"
     },
     {
         "id": 3,
@@ -89,7 +95,9 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Marseille.jpg",
+        "note": "4,1"
     },
     {
         "id": 4,
@@ -112,7 +120,9 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Bordeaux.jpg",
+        "note": "3,8"
     },
     {
         "id": 5,
@@ -135,7 +145,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Strasbourg.jpg",
+        "note": "4,2"
     },
     {
         "id": 6,
@@ -158,7 +170,9 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Canne.jpg",
+        "note": "2,2"
     },
     {
         "id": 7,
@@ -181,7 +195,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Toulouse.jpg",
+        "note": "3,7"
     },
     {
         "id": 8,
@@ -204,7 +220,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Montpellier.jpg",
+        "note": "4,4"
     },
     {
         "id": 9,
@@ -227,7 +245,9 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Lille.jpg",
+        "note": "3,9"
     },
     {
         "id": 10,
@@ -250,7 +270,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Aix-en-provence.jpg",
+        "note": "4,4"
     },
     {
         "id": 11,
@@ -273,7 +295,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Avignon.jpg",
+        "note": "2,8"
     },
     {
         "id": 12,
@@ -296,7 +320,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Nantes.jpg",
+        "note": "4,3"
     },
     {
         "id": 13,
@@ -319,7 +345,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Saint-Tropez.jpg",
+        "note": "4,7"
     },
     {
         "id": 14,
@@ -342,7 +370,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Grenoble.jpg",
+        "note": "3,3"
     },
     {
         "id": 15,
@@ -365,7 +395,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Biarritz.jpg",
+        "note": "4,2"
     },
     {
         "id": 16,
@@ -388,7 +420,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Rennes.jpeg",
+        "note": "2,7"
     },
     {
         "id": 17,
@@ -411,7 +445,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Saint-etienne.jpg",
+        "note": "4,3"
     },
     {
         "id": 18,
@@ -434,8 +470,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    },{
+        "festif":false,
+        "img": "../../public/assets/villes/Annecy.jpg",
+        "note": "3,6"
+    },
+    {
         "id": 19,
         "ville": "Saint-Malo",
         "region": "Bretagne",
@@ -456,7 +495,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Saint-Malo.jpg",
+        "note": "4,4"
     },
     {
         "id": 20,
@@ -479,7 +520,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Reims.jpg",
+        "note": "3,3"
     },
     {
         "id": 21,
@@ -502,7 +545,9 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Colmar.jpg",
+        "note": "4,5"
     },
     {
         "id": 22,
@@ -525,7 +570,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Rouen.jpg",
+        "note": "4,1"
     },
     {
         "id": 23,
@@ -548,7 +595,9 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Carcassonne.jpg",
+        "note": "4,5"
     },
     {
         "id": 24,
@@ -571,7 +620,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Tours.jpg",
+        "note": "3,7"
     },
     {
         "id": 25,
@@ -594,7 +645,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Dijon.jpg",
+        "note": "3,8"
     },
     {
         "id": 26,
@@ -617,7 +670,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Nancy.jpg",
+        "note": "2,6"
     },
     {
         "id": 27,
@@ -640,7 +695,9 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Amiens.jpg",
+        "note": "3,3"
     },
     {
         "id": 28,
@@ -663,7 +720,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/Metz.jpg",
+        "note": "3,4"
     },
     {
         "id": 29,
@@ -686,7 +745,9 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
+        "festif":true,
+        "img": "../../public/assets/villes/Rouen.jpg",
+        "note": "4,6"
     },
     {
         "id": 30,
@@ -709,8 +770,11 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Toulon.jpg",
+        "note": "4,1"
+    }, 
+    {
         "id": 31,
         "ville": "Pau",
         "region": "Nouvelle-Aquitaine",
@@ -731,8 +795,11 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Pau.jpg",
+        "note": "2,6"
+    }, 
+    {
         "id": 32,
         "ville": "Angers",
         "region": "Pays de la Loire",
@@ -753,8 +820,11 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Angers.jpg.webp",
+        "note": "4,2"
+    }, 
+    {
         "id": 33,
         "ville": "Perpignan",
         "region": "Occitanie",
@@ -775,8 +845,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Perpignan.jpeg",
+        "note": "3,5"
+    }, 
+    {
         "id": 34,
         "ville": "La Rochelle",
         "region": "Nouvelle-Aquitaine",
@@ -797,8 +870,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/LaRochelle.jpg",
+        "note": "4,7"
+    }, 
+    {
         "id": 35,
         "ville": "Antibes",
         "region": "Provence-Alpes-Côte d’Azur",
@@ -819,8 +895,11 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Antibes.jpg",
+        "note": "4,2"
+    }, 
+    {
         "id": 36,
         "ville": "Saint-Paul-de-Vence",
         "region": "Provence-Alpes-Côte d’Azur",
@@ -841,8 +920,12 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Saint-Paul-de-Vence.jpg",
+        "note": "4,6"
+
+    }, 
+    {
         "id": 37,
         "ville": "Le Havre",
         "region": "Normandie",
@@ -863,8 +946,11 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/LeHavre.jpg",
+        "note": "3,8"
+    }, 
+    {
         "id": 38,
         "ville": "Nîmes",
         "region": "Occitanie",
@@ -885,8 +971,11 @@
         "campagne": true,
         "urbain": true,
         "calme": false,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Nimes.jpg",
+        "note": "3,4"
+    }, 
+    {
         "id": 39,
         "ville": "Brest",
         "region": "Bretagne",
@@ -907,8 +996,11 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Brest.jpg",
+        "note": "3,2"
+    }, 
+    {
         "id": 40,
         "ville": "Limoges",
         "region": "Nouvelle-Aquitaine",
@@ -929,8 +1021,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Limoges.jpg",
+        "note": "3,5"
+    }, 
+    {
         "id": 41,
         "ville": "Mulhouse",
         "region": "Grand Est",
@@ -951,8 +1046,11 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Mulhouse.jpg.webp",
+        "note": "4,2"
+    }, 
+    {
         "id": 42,
         "ville": "Saint Denis (La Réunion)",
         "region": "La Réunion",
@@ -973,8 +1071,11 @@
         "campagne": false,
         "urbain": false,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/SaintDenis.jpg",
+        "note": "4,2"
+    }, 
+    {
         "id": 43,
         "ville": "Orléans",
         "region": "Centre-Val de Loire",
@@ -995,8 +1096,11 @@
         "campagne": false,
         "urbain": true,
         "calme": false,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Orleans.jpg",
+        "note": "4,6"
+    }, 
+    {
         "id": 44,
         "ville": "Besançon",
         "region": "Bourgogne-Franche-Comté",
@@ -1017,8 +1121,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Besancon.jpg",
+        "note": "2,8"
+    }, 
+    {
         "id": 45,
         "ville": "Caen",
         "region": "Normandie",
@@ -1039,8 +1146,11 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Caen.jpg",
+        "note": "3,2"
+    }, 
+    {
         "id": 46,
         "ville": "Poitiers",
         "region": "Nouvelle-Aquitaine",
@@ -1061,8 +1171,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Poitiers.jpg",
+        "note": "4,1"
+    }, 
+    {
         "id": 47,
         "ville": "Troyes",
         "region": "Grand Est",
@@ -1083,8 +1196,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Troyes.jpeg",
+        "note": "4,1"
+    }, 
+    {
         "id": 48,
         "ville": "Aix-les-Bains",
         "region": "Auvergne-Rhône-Alpes",
@@ -1105,8 +1221,11 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Aix-les-Bains.jpg",
+        "note": "2,5"
+    }, 
+    {
         "id": 49,
         "ville": "Chamonix-Mont-Blanc",
         "region": "Auvergne-Rhône-Alpes",
@@ -1127,8 +1246,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":true
-    }, {
+        "festif":true,
+        "img": "../../public/assets/villes/Chamonix-Mont-Blanc.png",
+        "note": "4,8"
+    }, 
+    {
         "id": 50,
         "ville": "L'île d’Ouessant",
         "region": "Bretagne",
@@ -1149,8 +1271,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Ouessant.jpg",
+        "note": "3,5"
+    }, 
+    {
         "id": 51,
         "ville": "Le Causse de Larzac",
         "region": "Occitanie",
@@ -1171,8 +1296,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Larzac.jpg",
+        "note": "4,6"
+    }, 
+    {
         "id": 52,
         "ville": "Saulieu",
         "region": "Bourgogne-Franche-Comté",
@@ -1193,8 +1321,11 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
-    }, {
+        "festif":false,
+        "img": "../../public/assets/villes/Saulieu.jpg",
+        "note": "4,3"
+    }, 
+    {
         "id": 53,
         "ville": "Cans et Cévennes",
         "region": "Occitanie",
@@ -1215,6 +1346,8 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false
+        "festif":false,
+        "img": "../../public/assets/villes/CansEtCevennes.jpg",
+        "note": "4,7"
     }
 ]
