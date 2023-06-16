@@ -157,6 +157,68 @@ ion-input{
     font-size: 16px;
 }
 
+/* card swiper and cards */
+
+.swiper {
+    height: 45%;
+}
+
+.swiper-wrapper .swiper-slide{
+    height: 100%;
+}
+
+.ionCardCity {
+    background-size: cover;
+    height: 90%;
+}
+
+.cardLocationName {
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--white);
+    margin: 0;
+}
+
+.cardCityName {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--white);
+    margin: 0;
+}
+
+.cardFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+.cityCardPlace {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--white);
+}
+
+.informationInCardFooter {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.cityCardContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%
+}
+
+.cardIcon {
+    width: 16px;
+    height: auto;
+}
+
 /* wishlist page*/
 
 .emptyWishlist {

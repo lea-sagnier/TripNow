@@ -1,12 +1,28 @@
-import { IonButtons, IonCard, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonImg, IonList, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButtons, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonContent, IonHeader, IonImg, IonList, IonPage, IonText, IonTitle, IonToolbar } from '@ionic/react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import { City } from '../interface/City';
 import HistoryPage from './User/HistoryPage';
+import {Swiper, SwiperSlide} from "swiper/react"
+import 'swiper/swiper.css';
+import * as data from "../data/villes-france.json";
 
 const Home: React.FC = () => {
-  // TODO use popularTrip data instead
-  const popularCities : City[]=[];
+
+  // convert JSON data to an array
+  const allCitiesInfomations = JSON.parse(JSON.stringify(data)).default
+
+  const cities : City[] = allCitiesInfomations.map((city : any) => {return {
+    id: city.id,
+    name: city.ville,
+    location: city.region,
+    place: city.departement,
+    img: city.img,
+    note: city.note,
+  }} )
+
+  console.log(cities)
+
 
   return (
     <IonPage>
@@ -29,19 +45,41 @@ const Home: React.FC = () => {
             </IonButtons>
           </IonToolbar>  
         </IonHeader>
-        <h2 className='sectionTitle'>Destinations populaires</h2>
-        { popularCities.length !== 0 &&
-          <IonList>
-              {popularCities.map((city) => (
-                <IonCard key={city.id}>
+        <h2 className='sectionTitle'>Destinations populaires</h2>  
+        { cities.length !== 0 && 
+          <Swiper slidesPerView={1.1}>
+              {cities.map((city ) => (
+                <SwiperSlide key={city.id}>
+                <IonCard className='ionCardCity' style={{"backgroundImage":`url(${city.img})`}}>
                   <IonCardHeader>
                     <IonCardTitle>
-                      {city.name}
+                      <p className='cardLocationName'>{city.location}</p>
+                      <p className='cardCityName'>{city.name}</p>
                     </IonCardTitle>
                   </IonCardHeader>
+                  <IonCardContent className='cityCardContent'> 
+                    <p className='cityCardPlace'>{city.place}</p> 
+                    <div className='cardFooter'>
+                        <div className='informationInCardFooter'>    
+                        <IonImg className='cardIcon'
+                          src="../../assets/locationIcon.svg"
+                          alt="arrow to go back"
+                        />
+                        <span>France</span>
+                        </div>
+                        <div className='informationInCardFooter'>    
+                            <span>{city.note}</span>
+                            <IonImg className='cardIcon'
+                                src="../../assets/star.svg"
+                                alt="heart to navigate"
+                            />
+                          </div>
+                      </div>   
+                  </IonCardContent>
                 </IonCard>
+                </SwiperSlide>
               ))}
-          </IonList>
+          </Swiper>
         }
         <h2 className='sectionTitle'>Dernière recherche</h2>
         <HistoryPage/>
