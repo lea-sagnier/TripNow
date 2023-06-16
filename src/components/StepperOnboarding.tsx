@@ -59,7 +59,7 @@ const StepperOnboarding: React.FC = () => {
             <IonButton fill="clear" onClick={handleMissOut}>Passer</IonButton>
           </div>
         ) : (
-          <IonButton fill="clear" onClick={handleMissOut}>Passer</IonButton>
+          <IonButton onClick={handleMissOut}>Passer</IonButton>
         )}
       </div>
     </div>
