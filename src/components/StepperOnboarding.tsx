@@ -12,8 +12,12 @@ const StepperOnboarding: React.FC = () => {
     }
   };
 
-  const handleMissOut = () => {
+  const handleLogin = () => {
     history.push("/login");
+  };
+
+  const handleRegister = () => {
+    history.push("/register");
   };
 
   return (
@@ -64,12 +68,17 @@ const StepperOnboarding: React.FC = () => {
           {currentStep < 2 ? (
             <div>
               <IonButton onClick={handleNextStep}>Suivant</IonButton>
-              <IonButton fill="clear" onClick={handleMissOut}>
+              <IonButton fill="clear" onClick={handleLogin}>
                 Passer
               </IonButton>
             </div>
           ) : (
-            <IonButton onClick={handleMissOut}>Passer</IonButton>
+            <div>
+              <IonButton onClick={handleLogin}>Se connecter</IonButton>
+              <IonButton fill="clear" onClick={handleRegister}>
+                S'inscrire
+              </IonButton>
+            </div>
           )}
         </div>
       </div>
