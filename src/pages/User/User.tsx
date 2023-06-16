@@ -60,7 +60,7 @@ const User: React.FC = () => {
         {/* <UserEmail /> */}
         <IonText>{displayName}</IonText>
 
-        <IonInput onIonChange={(e: any) => setDisplayName(e.target.value)} />
+        <IonInput onIonInput={(e: any) => setDisplayName(e.target.value)} />
         <IonButton onClick={updateDisplayName}>Modifier mon pseudo</IonButton>
         
         <IonButton href="./HistoryPage">Historique</IonButton>
