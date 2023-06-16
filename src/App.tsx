@@ -99,9 +99,6 @@ const App: React.FC = () => {
           <Route path="/historyPage">
             <HistoryPage />
           </Route>
-          <Route exact path="/home">
-            <Redirect to="/home" />
-          </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
