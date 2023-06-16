@@ -42,6 +42,7 @@ import { useCurrentUser } from './hooks/UserHook';
 import Register from './pages/Auth/Register';
 import { VerifyEmail } from './pages/Auth/VerifyEmail';
 import Search from './pages/Search';
+import Start from './pages/Start';
 import Onboarding from './pages/Onboarding';
 import Wishlist from './pages/Wishlist';
 
@@ -55,6 +56,9 @@ const App: React.FC = () => {
         <IonReactRouter>
           <IonRouterOutlet>
             <Route exact path="/">
+              <Start />
+            </Route>
+            <Route exact path="/onboarding">
               <Onboarding />
             </Route>
              <Route path="/login">
