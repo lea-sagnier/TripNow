@@ -42,7 +42,7 @@ const User: React.FC = () => {
       .signOut()
       .then(() => {
         alert("Vous avez été déconnecté avec succès");
-        navigate.push("/");
+        navigate.push("/home");
       })
       .catch((error) => {
         console.error(error);
