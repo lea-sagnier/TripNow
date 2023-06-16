@@ -46,12 +46,12 @@ form{
     height: 80%;
     justify-content: space-between;
 }
-
 ion-button{
     width: 100%;
 }
 
 /* password login */
+
 ion-input{
     border: var(--border) 1px solid;
     border-radius: 8px ;
