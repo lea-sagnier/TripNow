@@ -26,9 +26,16 @@ const Stepper: React.FC = () => {
     if (currentStep === 0 && displayName == "") {
       setCurrentStep(currentStep);
       setErrorMessage("Veuillez entrer un pseudo");
-    } else if (currentStep === 1 && email == "") {
-      setCurrentStep(currentStep);
-      setErrorMessage("Veuillez entrer un email");
+    } else if (currentStep === 1) {
+      if(email == ""){
+        setCurrentStep(currentStep);
+        setErrorMessage("Veuillez entrer un email");
+      }else if(!emailValid){
+        setCurrentStep(currentStep);
+        setErrorMessage("Veuillez entrer un mail valide");
+      }else {
+        setErrorMessage("");
+      }
     } else if (currentStep === 2) {
       if (password == "") {
         setErrorMessage("Veuillez entrer un mot de passe");
@@ -80,7 +87,12 @@ const Stepper: React.FC = () => {
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&)(+=._-]).{12,}$/;
     setPasswordValid(passwordRegex.test(value));
   };
+  const [emailValid, setemailValid] = useState(false);
 
+  const validateMail =(value: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    setemailValid(emailRegex.test(value));
+  }
   return (
     <div className="h-100">
       <div className="step-indicators">
@@ -127,7 +139,8 @@ const Stepper: React.FC = () => {
               required
               placeholder="exemple@gmail.com"
               value={email}
-              onIonInput={(e) => setEmail(e.detail.value!)}
+              onIonInput={(e) => {setEmail(e.detail.value!);
+              validateMail(e.detail.value!)}}
             />
           </div>
         )}
@@ -187,7 +200,7 @@ const Stepper: React.FC = () => {
         )}
       {errorMessage && <p className="error-message">{errorMessage}</p>}
       </div>
-      <div>
+      <div className="btn-stepper">
         {currentStep < 3 ? (
           <IonButton onClick={handleNextStep}>Suivant</IonButton>
         ) : (
