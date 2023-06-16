@@ -42,6 +42,7 @@ import { useCurrentUser } from './hooks/UserHook';
 import Register from './pages/Auth/Register';
 import { VerifyEmail } from './pages/Auth/VerifyEmail';
 import Search from './pages/Search';
+import Onboarding from './pages/Onboarding';
 
 setupIonicReact();
 
@@ -53,6 +54,9 @@ const App: React.FC = () => {
         <IonReactRouter>
           <IonRouterOutlet>
             <Route exact path="/">
+              <Onboarding />
+            </Route>
+             <Route path="/home">
               <Login />
             </Route>
              <Route path="/register">
@@ -91,7 +95,7 @@ const App: React.FC = () => {
           <Route path="/historyPage">
             <HistoryPage />
           </Route>
-          <Route exact path="/">
+          <Route exact path="/home">
             <Redirect to="/home" />
           </Route>
         </IonRouterOutlet>
