@@ -34,7 +34,7 @@ const ResetPassword: React.FC = () => {
 
   function closeModal() {
     setShowModal(false);
-    history.push("/"); // Redirection automatique vers la page de connexion
+    history.push("/home"); // Redirection automatique vers la page de connexion
   }
 
   return (
@@ -63,7 +63,7 @@ const ResetPassword: React.FC = () => {
             <IonButton type="submit">Réinitialiser le mot de passe</IonButton>
           </form>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <Link to="/">SE CONNECTER</Link>
+          <Link to="/home">SE CONNECTER</Link>
 
           <IonModal isOpen={showModal}>
             <IonContent>
