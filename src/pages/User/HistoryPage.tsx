@@ -1,12 +1,8 @@
 import {
     IonCard,
-    IonHeader,
     IonContent,
-    IonPage,
     IonCardHeader,
     IonCardTitle,
-    IonToolbar,
-    IonButton,
     IonList,
   } from "@ionic/react";
   import {
@@ -21,12 +17,10 @@ import {
   import { History } from "../../interface/History";
   import { useEffect, useState } from "react";
   import { useCurrentUser } from "../../hooks/UserHook";
-  import { useHistory } from "react-router";
   
   import "../style.css";
   
   const HistoryPage: React.FC = () => {
-    const navigate = useHistory();
     const [histories, setHistory] = useState<History[]>([]);
     const user = useCurrentUser();
     useEffect(() => {
@@ -57,30 +51,11 @@ import {
     //Page d'affichage des réservations
     if (histories.length === 0) {
       return (
-        <IonPage>
-          <IonHeader>
-            <IonToolbar>Mon historique</IonToolbar>
-          </IonHeader>
-          <IonContent fullscreen>
-              <h1>Vous n'avez d'historique</h1>
-              <IonButton
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate.push("/home");
-                }}
-              >
-                Retourner à l'accueil
-              </IonButton>
-          </IonContent>
-        </IonPage>
+        <span className="emptyHistory">Aucune recherche n’a été éffectué !</span>     
       );
     }
     return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>Mon historique</IonToolbar>
-        </IonHeader>
-        <IonContent fullscreen>
+        <div >
           <h1>Mon historique</h1>
           <IonList>
             {histories.map((history) => (
@@ -93,8 +68,7 @@ import {
               </IonCard>
             ))}
           </IonList>
-        </IonContent>
-      </IonPage>
+        </div>
     );
   };
   

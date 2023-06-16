@@ -43,6 +43,7 @@ import Register from './pages/Auth/Register';
 import { VerifyEmail } from './pages/Auth/VerifyEmail';
 import Search from './pages/Search';
 import Onboarding from './pages/Onboarding';
+import Wishlist from './pages/Wishlist';
 
 setupIonicReact();
 
@@ -91,6 +92,9 @@ const App: React.FC = () => {
           </Route>
           <Route path="/user">
             <User />
+          </Route>
+          <Route path="/wishlist">
+            <Wishlist />
           </Route>
           <Route path="/historyPage">
             <HistoryPage />
