@@ -207,7 +207,7 @@ const Stepper: React.FC = () => {
           <IonButton onClick={handleRegister}>Se connecter</IonButton>
         )}
         {currentStep < 1 ? (
-          <IonButton fill="clear" href="./">
+          <IonButton fill="clear" href="./login">
             Se connecter
           </IonButton>
         ) : (
