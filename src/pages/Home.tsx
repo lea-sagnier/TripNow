@@ -50,7 +50,7 @@ const Home: React.FC = () => {
           <Swiper slidesPerView={1.1}>
               {cities.map((city ) => (
                 <SwiperSlide key={city.id}>
-                <IonCard className='ionCardCity' style={{"backgroundImage":`url(${city.img})`}}>
+                <IonCard className='ionCardCity' style={{"backgroundImage":`linear-gradient(#000000ba , #00000000, #000000ba), url(${city.img})`}}>
                   <IonCardHeader>
                     <IonCardTitle>
                       <p className='cardLocationName'>{city.location}</p>
