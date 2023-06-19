@@ -114,7 +114,7 @@ ion-input{
 }
 .onbording-step{
     position: absolute;
-    top :61.5%;
+    top :67%;
     left:50%;
     transform: translate(-50%, -50%);
 }
@@ -127,7 +127,7 @@ ion-input{
 }
 .description-onbording{
     position: absolute;
-    top: 65%;
+    top: 70%;
     left: 0;
 }
 .btn-next{

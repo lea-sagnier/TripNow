@@ -1,7 +1,7 @@
 import { IonButton, IonContent, IonImg, IonPage } from "@ionic/react";
-import "./style.css";
+import "../style.css";
 import { useHistory } from "react-router";
-import Loader from "../components/Loader";
+import Loader from "../../components/Loader";
 import { useEffect, useState } from "react";
 
 const Start: React.FC = () => {
