@@ -9,10 +9,7 @@ import {
   IonLabel,
 } from "@ionic/react";
 import { Link, useHistory } from "react-router-dom";
-import {
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-} from "firebase/auth";
+import { signInWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
 import "../style.css";
@@ -26,12 +23,12 @@ const Login: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   const navigate = useHistory();
-  
+
   function logIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        navigate.push("/home");   
+        navigate.push("/home");
       })
       .catch((error) => {
         console.error(error);

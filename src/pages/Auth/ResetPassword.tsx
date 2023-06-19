@@ -70,7 +70,7 @@ const ResetPassword: React.FC = () => {
               <div className="modal-password">
                 <img src="../assets/icon/envoyer.png" alt="" />
                 <IonText>
-                  Votre e-mail de réinitialisation du mot de passe a été envoyé
+                  Votre email de réinitialisation du mot de passe a été envoyé
                   avec succès.
                 </IonText>
                 <IonButton onClick={closeModal}>OK</IonButton>

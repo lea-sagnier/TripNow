@@ -2,8 +2,8 @@
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-import { getFirestore } from 'firebase/firestore/lite';
-import {getAuth } from 'firebase/auth'
+import { getFirestore } from "firebase/firestore/lite";
+import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -12,7 +12,7 @@ const firebaseConfig = {
   projectId: "tripnow-9257e",
   storageBucket: "tripnow-9257e.appspot.com",
   messagingSenderId: "278752891376",
-  appId: "1:278752891376:web:67be8b20c4ea8099b34d35"
+  appId: "1:278752891376:web:67be8b20c4ea8099b34d35",
 };
 
 // Initialize Firebase

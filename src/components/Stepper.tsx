@@ -27,20 +27,20 @@ const Stepper: React.FC = () => {
       setCurrentStep(currentStep);
       setErrorMessage("Veuillez entrer un pseudo");
     } else if (currentStep === 1) {
-      if(email == ""){
+      if (email == "") {
         setCurrentStep(currentStep);
         setErrorMessage("Veuillez entrer un email");
-      }else if(!emailValid){
+      } else if (!emailValid) {
         setCurrentStep(currentStep);
-        setErrorMessage("Veuillez entrer un mail valide");
-      }else {
+        setErrorMessage("Veuillez entrer un email valide");
+      } else {
         setErrorMessage("");
       }
     } else if (currentStep === 2) {
       if (password == "") {
         setErrorMessage("Veuillez entrer un mot de passe");
         setCurrentStep(currentStep);
-      }else if (password != cpassword) {
+      } else if (password != cpassword) {
         setErrorMessage("Le mot de passe de confirmation ne correspond pas");
         setCurrentStep(currentStep);
       } else if (!passwordValid) {
@@ -48,7 +48,7 @@ const Stepper: React.FC = () => {
           "Votre mot de passe doit contenir au moins 12 caractères dont une majuscule, une minuscule, un chiffre et un caractère spécial."
         );
         setCurrentStep(currentStep + 1);
-      } else{
+      } else {
         setErrorMessage("");
       }
     } else {
@@ -67,8 +67,7 @@ const Stepper: React.FC = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         updateProfile(user, { displayName: displayName })
-          .then(() => {
-          })
+          .then(() => {})
           .catch((error) => {
             console.error("Erreur lors de l'ajout du pseudo", error);
           });
@@ -89,10 +88,10 @@ const Stepper: React.FC = () => {
   };
   const [emailValid, setemailValid] = useState(false);
 
-  const validateMail =(value: string) => {
+  const validateMail = (value: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     setemailValid(emailRegex.test(value));
-  }
+  };
   return (
     <div className="h-100">
       <div className="step-indicators">
@@ -111,11 +110,11 @@ const Stepper: React.FC = () => {
       </div>
       <div className="stepper-content">
         {currentStep === 0 && (
-          <div >
+          <div>
             <h2>S'inscrire</h2>
             <p>
-              Votre nom d’utilisateur sera visible sur votre profil, vos annonces
-              ... Vous pourrez le modifier quand bon vous semble
+              Votre nom d’utilisateur sera visible sur votre profil. Vous
+              pourrez le modifier dans vos paramètres de compte.
             </p>
             <IonLabel>Pseudo</IonLabel>
             <IonInput
@@ -130,17 +129,19 @@ const Stepper: React.FC = () => {
           <div>
             <h2>Adresse email</h2>
             <p>
-              Optimiser votre envie de voyager en nous rejoignant. La création
+              Optimisez votre envie de voyager en nous rejoignant. La création
               d’un compte vous permettra de retrouver toutes nos propositions de
-              voyage à votre gout !
+              voyage à votre goût !
             </p>
             <IonLabel>Votre email</IonLabel>
             <IonInput
               required
               placeholder="exemple@gmail.com"
               value={email}
-              onIonInput={(e) => {setEmail(e.detail.value!);
-              validateMail(e.detail.value!)}}
+              onIonInput={(e) => {
+                setEmail(e.detail.value!);
+                validateMail(e.detail.value!);
+              }}
             />
           </div>
         )}
@@ -189,16 +190,16 @@ const Stepper: React.FC = () => {
         )}
 
         {currentStep === 3 && (
-          <div >
+          <div>
             <h2>Félicitations !</h2>
             <p>
-              Votre compte à bien était créer, vous êtes maintenant prêt à trouver
-              le voyage qui vous correspond le mieux !{" "}
+              Votre compte a bien était créé, vous êtes maintenant prêt à
+              trouver le voyage qui vous correspond le mieux !
             </p>
-            <p> Alors, connecter vous pour en profiter au maximum.</p>
+            <p> Alors, connectez-vous pour en profiter au maximum.</p>
           </div>
         )}
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </div>
       <div className="btn-stepper">
         {currentStep < 3 ? (
