@@ -65,6 +65,10 @@ form{
     height: 80%;
     justify-content: space-between;
 }
+.btn-icon{
+    width: auto;
+    color: var(--black);
+}
 ion-button{
     width: 100%;
 }
@@ -181,6 +185,9 @@ ion-input{
     font-weight: 900;
     font-size: 32px;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .heart {
@@ -245,7 +252,7 @@ ion-input{
 .informationInCardFooter {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     gap: 4px;
     font-weight: 500;
     font-size: 12px;
@@ -290,4 +297,9 @@ ion-button{
 .onbording-description{
     position: absolute;
     bottom: 0;
+}
+
+.btn-navigation{
+    display: flex;
+    justify-content: space-between ;
 }
