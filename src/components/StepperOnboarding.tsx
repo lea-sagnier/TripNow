@@ -7,7 +7,7 @@ const StepperOnboarding: React.FC = () => {
   const history = useHistory();
 
   const handleNextStep = () => {
-    if (currentStep < 2) {
+    if (currentStep < 1) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -22,50 +22,44 @@ const StepperOnboarding: React.FC = () => {
 
   return (
     <div className="h-100">
-      <div className="step-indicators">
+      <div className="step-indicators onbording-step">
         <div
           className={`step-indicator ${currentStep === 0 ? "active" : ""}`}
         ></div>
         <div
           className={`step-indicator ${currentStep === 1 ? "active" : ""}`}
         ></div>
-        <div
-          className={`step-indicator ${currentStep === 2 ? "active" : ""}`}
-        ></div>
       </div>
       <div className="stepper-content">
         {currentStep === 0 && (
           <div>
-            <IonImg src="../../assets/background.svg" alt="some landscapes" />
-            <h1 className="titleInformation">Recherche</h1>
-            <p className="informations">
-              Différentes questions vous seront posées pour vous proposer des
-              voyages correspondants.
-            </p>
+            <IonImg src="../../assets/background.svg" alt="some landscapes"/>
+            <div className="description-onbording">
+              <h1 className="titleInformation">Recherche</h1>
+              <p className="informations">
+                Différentes questions vous seront posées pour vous proposer des
+                voyages correspondants.
+              </p>
+            </div>
           </div>
         )}
 
         {currentStep === 1 && (
           <div>
-            <IonImg src="../../assets/background.svg" alt="some landscapes" />
-            <h1 className="titleInformation">Titre</h1>
-            <p className="informations">Sous titre</p>
+            <IonImg  src="../../assets/background.svg" alt="some landscapes"
+            />
+            <div className="description-onbording">
+              <h1 className="titleInformation">Swippez pour voyager</h1>
+              <p className="informations">
+                Il vous suffit de glisser vers le haut pour découvrir les
+                destinations de vos envies.
+              </p>
+            </div>
           </div>
         )}
 
-        {currentStep === 2 && (
-          <div>
-            <IonImg src="../../assets/background.svg" alt="some landscapes" />
-            <h1 className="titleInformation">Swippez pour voyager</h1>
-            <p className="informations">
-              Il vous suffit de glisser vers le haut pour découvrir les
-              destinations de vos envies.
-            </p>
-          </div>
-        )}
-
-        <div>
-          {currentStep < 2 ? (
+        <div className="btn-next">
+          {currentStep < 1 ? (
             <div>
               <IonButton onClick={handleNextStep}>Suivant</IonButton>
               <IonButton fill="clear" onClick={handleLogin}>

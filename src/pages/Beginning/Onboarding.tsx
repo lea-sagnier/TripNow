@@ -5,16 +5,14 @@ import {
   IonPage,  
 } from "@ionic/react";
 
-import StepperOnboarding from "../components/StepperOnboarding";
+import StepperOnboarding from "../../components/StepperOnboarding";
 
 const Onboarding: React.FC = () => {
     return (
         <IonPage>
         <IonHeader></IonHeader>
         <IonContent>
-            <section>
                 <StepperOnboarding/>
-            </section>
         </IonContent>
         </IonPage>
     );

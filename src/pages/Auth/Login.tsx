@@ -8,7 +8,7 @@ import {
   IonIcon,
   IonLabel,
 } from "@ionic/react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import {
   signInWithEmailAndPassword,
   GoogleAuthProvider,
@@ -25,10 +25,13 @@ const Login: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(true);
 
+  const navigate = useHistory();
+  
   function logIn() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
+        navigate.push("/home");   
       })
       .catch((error) => {
         console.error(error);
