@@ -2,8 +2,6 @@ import {
   IonButton,
   IonCard,
   IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
   IonContent,
   IonHeader,
   IonIcon,
@@ -17,8 +15,9 @@ import HistoryPage from "./User/HistoryPage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.css";
 import * as data from "../data/villes-france.json";
-import { heart, locationOutline, star } from "ionicons/icons";
+import { heart} from "ionicons/icons";
 import { useEffect, useState } from 'react';
+import { CitiesSwiper } from "./CitiesSwiper";
 
 const Home: React.FC = () => {
   // convert JSON data to an array
@@ -34,10 +33,12 @@ const Home: React.FC = () => {
   }} )
 
   const getRandomCities = () => {
+    const citiesAvailable = cities;
     let selectedCities : City[] = []
     for(let i = 0; i<5; i++){
-      const rand = Math.floor(Math.random()*cities.length);
-      selectedCities.push(cities[rand])
+      const rand = Math.floor(Math.random()*citiesAvailable.length);
+      selectedCities.push(citiesAvailable[rand])
+      citiesAvailable.splice(rand, 1)
     }
     setSelectedCities(selectedCities)
   }
@@ -48,11 +49,6 @@ const Home: React.FC = () => {
   const [selectedCities, setSelectedCities] = useState<City[]>([])
 
   useEffect(() => {getRandomCities()}, [activeMonth])
-
-  const onChangeMonth = (month : string) => {
-    setActiveMonth(month);
-    getRandomCities();
-  }
 
   return (
     <IonPage>
@@ -74,7 +70,7 @@ const Home: React.FC = () => {
                  
                 <IonCard className='monthIonCard' >
                   
-                  <IonCardContent className={activeMonth === month ? "activeCard" : "" } onClick={() => onChangeMonth(month)}  > 
+                  <IonCardContent className={activeMonth === month ? "activeCard" : "" } onClick={() => setActiveMonth(month)}  > 
                     <p className='monthText'>{month}</p>  
                   </IonCardContent>
                 
@@ -82,36 +78,8 @@ const Home: React.FC = () => {
                 </SwiperSlide>
               ))}
         </Swiper>
-
-        { selectedCities.length !== 0 && 
-          <Swiper slidesPerView={1.1} className='citySwiper'>
-              {selectedCities.map((city ) => (
-                <SwiperSlide key={city.id}>
-                <IonCard className='ionCardCity' style={{"backgroundImage":`linear-gradient(#000000ba , #00000000, #000000ba), url(${city.img})`}}>
-                  <IonCardHeader>
-                    <IonCardTitle>
-                      <p className="cardLocationName">{city.location}</p>
-                      <p className="cardCityName">{city.name}</p>
-                    </IonCardTitle>
-                  </IonCardHeader>
-                  <IonCardContent className="cityCardContent">
-                    <p className="cityCardPlace">{city.place}</p>
-                    <div className="cardFooter">
-                      <div className="informationInCardFooter">
-                      <IonIcon slot="icon-only" aria-hidden="true" icon={locationOutline} />
-                        <span>France</span>
-                      </div>
-                      <div className="informationInCardFooter">
-                        <span>{city.note}</span>
-                        <IonIcon slot="icon-only" aria-hidden="true" icon={star} />
-                      </div>
-                    </div>
-                  </IonCardContent>
-                </IonCard>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        }
+        <CitiesSwiper selectedCities={selectedCities} />
+       
         <h2 className="sectionTitle">Dernière recherche</h2>
         <HistoryPage />
       </IonContent>
