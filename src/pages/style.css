@@ -69,6 +69,10 @@ form{
     width: auto;
     color: var(--black);
 }
+.btn-chevron{
+    border:1px solid var(--border);
+    border-radius: 8px;
+}
 ion-button{
     width: 100%;
 }

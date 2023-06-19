@@ -68,7 +68,7 @@ const Wishlist: React.FC = () => {
           <IonButton fill="clear" className="btn-icon" href="./home">
             <IonIcon slot="icon-only" aria-hidden="true" icon={chevronBackOutline} />
           </IonButton>
-          <IonButton fill="clear" className="btn-icon">
+          <IonButton fill="clear" className="btn-icon btn-chevron">
             <IonIcon slot="icon-only" aria-hidden="true" icon={heart} />
           </IonButton>
         </div>
@@ -79,8 +79,6 @@ const Wishlist: React.FC = () => {
               faire des découvertes !
             </span>
             <IonButton
-              className="primaryButton"
-              color={"primary"}
               onClick={onNavigate}
             >
               Découvrir
