@@ -307,3 +307,9 @@ ion-button{
     display: flex;
     justify-content: space-between ;
 }
+
+.userpage{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

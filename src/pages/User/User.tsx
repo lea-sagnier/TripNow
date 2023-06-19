@@ -69,7 +69,7 @@ const User: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <section>
+        <section className="userpage">
           <h1>{displayName}</h1>
 
           {/* <IonInput onIonInput={(e: any) => setDisplayName(e.target.value)} />
