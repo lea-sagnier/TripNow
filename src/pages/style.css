@@ -1,4 +1,13 @@
-*{
+@font-face {
+    font-family: 'Satoshi-Regular';
+    src: url('../../public/assets/font/Satoshi-Regular.woff') format('woff2'),
+         url('../../public/assets/font/Satoshi-Regular.woff') format('woff'),
+         url('../../public/assets/font/Satoshi-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  *{
     --ion-color-primary: var(--style-blue); /* Couleur primaire */
     --ion-color-primary-shade: var(--dark-slate-grey);
     --ion-color-primary-tint:var(--dark-slate-grey);
@@ -7,7 +16,9 @@
     --black: #001011;
     --dark-slate-grey: #304748;
     --border: #f4f4f4;
+    --ion-font-family: "Satoshi-Regular"
 }
+
 html{
     margin: 0;
     padding: 0;
@@ -15,7 +26,7 @@ html{
 }
 
 body {
-    font-family: sans-serif; 
+    font-family: "Satoshi-Regular"; 
     font-size: 100%;
     color: var(--black);
     height: 100%;
@@ -53,6 +64,14 @@ form{
     flex-direction: column;
     height: 80%;
     justify-content: space-between;
+}
+.btn-icon{
+    width: auto;
+    color: var(--black);
+}
+.btn-chevron{
+    border:1px solid var(--border);
+    border-radius: 8px;
 }
 ion-button{
     width: 100%;
@@ -170,6 +189,9 @@ ion-input{
     font-weight: 900;
     font-size: 32px;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .heart {
@@ -234,7 +256,7 @@ ion-input{
 .informationInCardFooter {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     gap: 4px;
     font-weight: 500;
     font-size: 12px;
@@ -279,4 +301,9 @@ ion-button{
 .onbording-description{
     position: absolute;
     bottom: 0;
+}
+
+.btn-navigation{
+    display: flex;
+    justify-content: space-between ;
 }
