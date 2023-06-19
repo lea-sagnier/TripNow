@@ -6,39 +6,53 @@ import {
   IonCardTitle,
   IonContent,
   IonHeader,
-  IonImg,
-  IonList,
   IonIcon,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
 import "./style.css";
-import { Link } from "react-router-dom";
 import { City } from "../interface/City";
 import HistoryPage from "./User/HistoryPage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.css";
 import * as data from "../data/villes-france.json";
 import { heart, locationOutline, star } from "ionicons/icons";
+import { useEffect, useState } from 'react';
 
 const Home: React.FC = () => {
   // convert JSON data to an array
   const allCitiesInfomations = JSON.parse(JSON.stringify(data)).default;
 
-  const cities: City[] = allCitiesInfomations.map((city: any) => {
-    return {
-      id: city.id,
-      name: city.ville,
-      location: city.region,
-      place: city.departement,
-      img: city.img,
-      note: city.note,
-    };
-  });
+  const cities : City[] = allCitiesInfomations.map((city : any) => {return {
+    id: city.id,
+    name: city.ville,
+    location: city.region,
+    place: city.departement,
+    img: city.img,
+    note: city.note,
+  }} )
 
-  console.log(cities);
+  const getRandomCities = () => {
+    let selectedCities : City[] = []
+    for(let i = 0; i<5; i++){
+      const rand = Math.floor(Math.random()*cities.length);
+      selectedCities.push(cities[rand])
+    }
+    setSelectedCities(selectedCities)
+  }
+
+  const months = ["Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre", "Janvier", "Février", "Mars", "Avril", "Mai"];
+
+  const [activeMonth, setActiveMonth] = useState(months[0]);
+  const [selectedCities, setSelectedCities] = useState<City[]>([])
+
+  useEffect(() => {getRandomCities()}, [activeMonth])
+
+  const onChangeMonth = (month : string) => {
+    setActiveMonth(month);
+    getRandomCities();
+  }
 
   return (
     <IonPage>
@@ -49,14 +63,29 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent fullscreen className="ion-padding">
         <h1 className="homepageTitle">Où allez-vous ?
-        <IonButton className="btn-icon" fill="clear" href="./wishlist">
-          <IonIcon slot="icon-only" aria-hidden="true" icon={heart} />
-        </IonButton>
+          <IonButton className="btn-icon" fill="clear" href="./wishlist">
+            <IonIcon slot="icon-only" aria-hidden="true" icon={heart} />
+          </IonButton>
         </h1>
         <h2 className="sectionTitle">Destinations populaires</h2>
-        {cities.length !== 0 && (
-          <Swiper slidesPerView={1.1}>
-              {cities.map((city ) => (
+        <Swiper slidesPerView={3} spaceBetween={10} className='monthSwiper'>
+              {months.map((month ) => (
+                <SwiperSlide key={month}>
+                 
+                <IonCard className='monthIonCard' >
+                  
+                  <IonCardContent className={activeMonth === month ? "activeCard" : "" } onClick={() => onChangeMonth(month)}  > 
+                    <p className='monthText'>{month}</p>  
+                  </IonCardContent>
+                
+                </IonCard>
+                </SwiperSlide>
+              ))}
+        </Swiper>
+
+        { selectedCities.length !== 0 && 
+          <Swiper slidesPerView={1.1} className='citySwiper'>
+              {selectedCities.map((city ) => (
                 <SwiperSlide key={city.id}>
                 <IonCard className='ionCardCity' style={{"backgroundImage":`linear-gradient(#000000ba , #00000000, #000000ba), url(${city.img})`}}>
                   <IonCardHeader>
@@ -82,7 +111,7 @@ const Home: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-        )}
+        }
         <h2 className="sectionTitle">Dernière recherche</h2>
         <HistoryPage />
       </IonContent>
