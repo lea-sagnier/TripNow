@@ -8,7 +8,7 @@ import {
   IonLabel,
   IonPage,
 } from "@ionic/react";
-import { eyeOutline, eyeOffOutline } from "ionicons/icons";
+import { eyeOutline, eyeOffOutline, chevronBackOutline } from "ionicons/icons";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { useHistory } from "react-router-dom";
@@ -82,28 +82,22 @@ const Register: React.FC = () => {
     <IonPage>
       <IonContent>
         <section>
+        <IonButton fill="clear" className="btn-icon" href="./onboarding">
+                <IonIcon className="back-btn" slot="icon-only" aria-hidden="true" icon={chevronBackOutline} />
+              </IonButton>
+
+            <h1 className="display">S'inscrire</h1>
           <div>
-            <h2>S'inscrire</h2>
-            <p>
-              Votre nom d’utilisateur sera visible sur votre profil, vos
-              annonces ... Vous pourrez le modifier quand bon vous semble
-            </p>
             <IonLabel>Pseudo</IonLabel>
             <IonInput
-              placeholder="Pseudo"
+              placeholder="Exemple59"
               value={displayName}
               onIonInput={(e) => setDisplayName(e.detail.value!)}
             />
           </div>
 
           <div>
-            <h2>Adresse email</h2>
-            <p>
-              Optimiser votre envie de voyager en nous rejoignant. La création
-              d’un compte vous permettra de retrouver toutes nos propositions de
-              voyage à votre gout !
-            </p>
-            <IonLabel>Votre email</IonLabel>
+            <IonLabel>Adresse email*</IonLabel>
             <IonInput
               required
               placeholder="exemple@gmail.com"
@@ -116,13 +110,7 @@ const Register: React.FC = () => {
           </div>
 
           <div>
-            <h2>Définissez votre mot de passe</h2>
-            <p>
-              Votre mot de passe doit contenir au moins 12 caractères dont une
-              majuscule, une minuscule, un chiffre et un caractère spécial parmi
-              !@#$%^&)(+=._-
-            </p>
-            <IonLabel>Mot de passe</IonLabel>
+            <IonLabel>Mot de passe*</IonLabel>
             <div className="input-icon">
               <IonInput
                 required
@@ -157,6 +145,7 @@ const Register: React.FC = () => {
           </div>
           {errorMessage && <p className="error-message">{errorMessage}</p>}
           <IonButton onClick={handleRegister}>S'incrire</IonButton>
+          <IonButton fill="clear" href="./login">Se connecter</IonButton>
         </section>
       </IonContent>
     </IonPage>
