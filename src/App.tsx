@@ -42,6 +42,8 @@ import Search from './pages/Search';
 import Start from './pages/Beginning/Start';
 import Onboarding from './pages/Beginning/Onboarding';
 import Wishlist from './pages/Wishlist';
+import { SearchQuestions } from './pages/SearchQuestions/SearchQuestions';
+import { Recap } from './pages/SearchQuestions/Recap';
 
 setupIonicReact();
 
@@ -85,6 +87,12 @@ const App: React.FC = () => {
           </Route>
           <Route exact path="/search">
             <Search />
+          </Route>
+          <Route path="/form">
+            <SearchQuestions />
+          </Route>
+          <Route path="/recap">
+            <Recap />
           </Route>
           <Route path="/user">
             <User />
