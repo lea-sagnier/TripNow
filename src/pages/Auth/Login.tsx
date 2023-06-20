@@ -100,10 +100,12 @@ const Login: React.FC = () => {
 
                 <IonButton type="submit">Se connecter</IonButton>
               </form>
+                    <div  className="pt-1">
 
               <IonButton fill="clear" href="/register">
                 S'inscrire
               </IonButton>
+                    </div>
             </section>
           </IonContent>
         </IonPage>

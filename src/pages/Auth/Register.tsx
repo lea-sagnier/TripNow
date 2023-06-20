@@ -82,70 +82,75 @@ const Register: React.FC = () => {
     <IonPage>
       <IonContent>
         <section>
-        <IonButton fill="clear" className="btn-icon" href="./onboarding">
-                <IonIcon className="back-btn" slot="icon-only" aria-hidden="true" icon={chevronBackOutline} />
-              </IonButton>
-
-            <h1 className="display">S'inscrire</h1>
-          <div>
-            <IonLabel>Pseudo</IonLabel>
-            <IonInput
-              placeholder="Exemple59"
-              value={displayName}
-              onIonInput={(e) => setDisplayName(e.detail.value!)}
+          <IonButton fill="clear" className="btn-icon" href="./onboarding">
+            <IonIcon
+              className="back-btn"
+              slot="icon-only"
+              aria-hidden="true"
+              icon={chevronBackOutline}
             />
-          </div>
+          </IonButton>
 
-          <div>
-            <IonLabel>Adresse email*</IonLabel>
-            <IonInput
-              required
-              placeholder="exemple@gmail.com"
-              value={email}
-              onIonInput={(e) => {
-                setEmail(e.detail.value!);
-                validateMail(e.detail.value!);
-              }}
-            />
-          </div>
-
-          <div>
-            <IonLabel>Mot de passe*</IonLabel>
-            <div className="input-icon">
+          <h1 className="display">S'inscrire</h1>
+          <div className="form-register">
+            <div>
+              <IonLabel>Pseudo</IonLabel>
+              <IonInput
+                placeholder="Exemple59"
+                value={displayName}
+                onIonInput={(e) => setDisplayName(e.detail.value!)}
+              />
+              <IonLabel>Adresse email*</IonLabel>
               <IonInput
                 required
-                type={showPassword ? "text" : "password"}
-                value={password}
+                placeholder="exemple@gmail.com"
+                value={email}
                 onIonInput={(e) => {
-                  setPassword(e.detail.value!);
-                  validatePassword(e.detail.value!);
+                  setEmail(e.detail.value!);
+                  validateMail(e.detail.value!);
                 }}
               />
-              <IonIcon
-                className="password-toggle-icon"
-                icon={showPassword ? eyeOffOutline : eyeOutline}
-                onClick={() => setShowPassword(!showPassword)}
-              />
-            </div>
+              <IonLabel>Mot de passe*</IonLabel>
+              <div className="input-icon">
+                <IonInput
+                  required
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onIonInput={(e) => {
+                    setPassword(e.detail.value!);
+                    validatePassword(e.detail.value!);
+                  }}
+                />
+                <IonIcon
+                  className="password-toggle-icon"
+                  icon={showPassword ? eyeOffOutline : eyeOutline}
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              </div>
 
-            <IonLabel>Confirmation du mot de passe</IonLabel>
-            <div className="input-icon">
-              <IonInput
-                required
-                type={showCPassword ? "text" : "password"}
-                value={cpassword}
-                onIonInput={(e) => setCPassword(e.detail.value!)}
-              />
-              <IonIcon
-                className="password-toggle-icon"
-                icon={showCPassword ? eyeOffOutline : eyeOutline}
-                onClick={() => setShowCPassword(!showCPassword)}
-              />
+              <IonLabel>Confirmation du mot de passe</IonLabel>
+              <div className="input-icon">
+                <IonInput
+                  required
+                  type={showCPassword ? "text" : "password"}
+                  value={cpassword}
+                  onIonInput={(e) => setCPassword(e.detail.value!)}
+                />
+                <IonIcon
+                  className="password-toggle-icon"
+                  icon={showCPassword ? eyeOffOutline : eyeOutline}
+                  onClick={() => setShowCPassword(!showCPassword)}
+                />
+              </div>
+              {errorMessage && <p className="error-message">{errorMessage}</p>}
+            </div>
+            <div className="d-flex">
+              <IonButton onClick={handleRegister}>S'incrire</IonButton>
+              <IonButton fill="clear" href="./login">
+                Se connecter
+              </IonButton>
             </div>
           </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <IonButton onClick={handleRegister}>S'incrire</IonButton>
-          <IonButton fill="clear" href="./login">Se connecter</IonButton>
         </section>
       </IonContent>
     </IonPage>
