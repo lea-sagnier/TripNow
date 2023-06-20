@@ -203,6 +203,7 @@ ion-input{
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 16px;
+    padding-top: 32px;
 }
 
 .emptyHistory {
@@ -213,7 +214,7 @@ ion-input{
 
 /* card swiper and cards */
 
-.swiper {
+.citySwiper {
     height: 45%;
 }
 
@@ -224,6 +225,7 @@ ion-input{
 .ionCardCity {
     background-size: cover;
     height: 90%;
+    margin-top: 1rem;
 }
 
 .cardLocationName {
@@ -271,6 +273,22 @@ ion-input{
 .cardIcon {
     width: 16px;
     height: auto;
+}
+
+.monthIonCard {
+    width: fit-content;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.monthText {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.activeCard {
+    border: 2px solid #1B9AAA;
+    border-radius: 10px;
 }
 
 /* wishlist page*/
