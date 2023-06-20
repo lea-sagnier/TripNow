@@ -55,7 +55,7 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen className="ion-padding">
-        <h1 className="homepageTitle">Où allez-vous ?
+        <h1 className="display">Où allez-vous ?
           <IonButton className="btn-icon" fill="clear" href="./wishlist">
             <IonIcon slot="icon-only" aria-hidden="true" icon={heart} />
           </IonButton>

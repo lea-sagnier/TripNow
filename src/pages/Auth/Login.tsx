@@ -14,7 +14,7 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import { eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
+import { chevronBackOutline, eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
 import "../style.css";
 import Loader from "../../components/Loader";
 
@@ -54,14 +54,17 @@ const Login: React.FC = () => {
         <IonPage>
           <IonContent>
             <section>
-              <h1>Se connecter</h1>
+              <IonButton fill="clear" className="btn-icon" href="./onboarding">
+                <IonIcon className="back-btn" slot="icon-only" aria-hidden="true" icon={chevronBackOutline} />
+              </IonButton>
+              <h1 className="display">Se connecter</h1>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
                   logIn();
                 }}
               >
-                <div>
+                <div className="d-flex">
                   <IonLabel position="stacked">Adresse mail</IonLabel>
                   <div className="input-icon">
                     <IonInput
@@ -97,6 +100,7 @@ const Login: React.FC = () => {
 
                 <IonButton type="submit">Se connecter</IonButton>
               </form>
+
               <IonButton fill="clear" href="/register">
                 S'inscrire
               </IonButton>
