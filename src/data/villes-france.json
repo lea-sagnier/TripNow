@@ -9,8 +9,8 @@
         "latitude": "48.866667",
         "chaud":true,
         "froid":true,
-        "detente": true,
-        "aventure":true,
+        "detente": false,
+        "aventure":false,
         "seul": true,
         "plusieur":true,
         "contemporain": true,
@@ -22,7 +22,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Paris.jpg",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 1,
@@ -33,9 +36,9 @@
         "longitude": "7.250000",
         "latitude": "43.700000",
         "chaud":true,
-        "froid":true,
+        "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": true,
         "plusieur":true,
         "contemporain": true,
@@ -44,10 +47,13 @@
         "montagne": false,
         "campagne": false,
         "urbain": true,
-        "calme": true,
+        "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Nice.jpg",
-        "note": "4,1"
+        "note": "4,1",
+        "touristique": true,
+        "tempere": true, 
+        "périurbaine": false
     },
     {
         "id": 2,
@@ -60,7 +66,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":true,
+        "aventure":false,
         "seul": true,
         "plusieur":true,
         "contemporain": true,
@@ -72,7 +78,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Lyon.jpg",
-        "note": "3,2"
+        "note": "3,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 3,
@@ -97,7 +106,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Marseille.jpg",
-        "note": "4,1"
+        "note": "4,1",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 4,
@@ -110,7 +122,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":true,
+        "aventure":false,
         "seul": false,
         "plusieur":true,
         "contemporain": true,
@@ -122,7 +134,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Bordeaux.jpg",
-        "note": "3,8"
+        "note": "3,8",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 5,
@@ -135,7 +150,7 @@
         "chaud":true,
         "froid":true,
         "detente": true,
-        "aventure":true,
+        "aventure":false,
         "seul": true,
         "plusieur":true,
         "contemporain": false,
@@ -147,7 +162,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Strasbourg.jpg",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 6,
@@ -160,7 +178,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain": true,
@@ -172,7 +190,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Canne.jpg",
-        "note": "2,2"
+        "note": "2,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 7,
@@ -185,7 +206,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": true,
         "plusieur":true,
         "contemporain": true,
@@ -197,7 +218,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Toulouse.jpg",
-        "note": "3,7"
+        "note": "3,7",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 8,
@@ -219,10 +243,13 @@
         "montagne": false,
         "campagne": true,
         "urbain": true,
-        "calme": true,
+        "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Montpellier.jpg",
-        "note": "4,4"
+        "note": "4,4",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 9,
@@ -247,7 +274,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Lille.jpg",
-        "note": "3,9"
+        "note": "3,9",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 10,
@@ -272,7 +302,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Aix-en-provence.jpg",
-        "note": "4,4"
+        "note": "4,4",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 11,
@@ -285,7 +318,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain": false,
@@ -295,9 +328,12 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Avignon.jpg",
-        "note": "2,8"
+        "note": "2,8",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 12,
@@ -310,7 +346,7 @@
         "chaud":false,
         "froid":true,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain": false,
@@ -322,7 +358,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Nantes.jpg",
-        "note": "4,3"
+        "note": "4,3",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 13,
@@ -335,7 +374,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain": true,
@@ -347,7 +386,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Saint-Tropez.jpg",
-        "note": "4,7"
+        "note": "4,7",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 14,
@@ -358,7 +400,7 @@
         "longitude": "5.724524",
         "latitude": "45.188529",
         "chaud":true,
-        "froid":false,
+        "froid":true,
         "detente": true,
         "aventure":true,
         "seul": false,
@@ -370,9 +412,12 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Grenoble.jpg",
-        "note": "3,3"
+        "note": "3,3",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 15,
@@ -397,7 +442,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Biarritz.jpg",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 16,
@@ -410,7 +458,7 @@
         "chaud":false,
         "froid":true,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": true,
         "plusieur":true,
         "contemporain": true,
@@ -422,7 +470,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Rennes.jpeg",
-        "note": "2,7"
+        "note": "2,7",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 17,
@@ -435,7 +486,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain": true,
@@ -445,9 +496,12 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Saint-etienne.jpg",
-        "note": "4,3"
+        "note": "4,3",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 18,
@@ -472,7 +526,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Annecy.jpg",
-        "note": "3,6"
+        "note": "3,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 19,
@@ -495,9 +552,12 @@
         "campagne": false,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Saint-Malo.jpg",
-        "note": "4,4"
+        "note": "4,4",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 20,
@@ -507,10 +567,10 @@
         "pays": "France",
         "longitude": "4.031696",
         "latitude": "49.258329",
-        "chaud":false,
+        "chaud":true,
         "froid":true,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": true,
         "plusieur":true,
         "contemporain":false,
@@ -522,7 +582,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Reims.jpg",
-        "note": "3,3"
+        "note": "3,3",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 21,
@@ -545,9 +608,12 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Colmar.jpg",
-        "note": "4,5"
+        "note": "4,5",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 22,
@@ -557,10 +623,10 @@
         "pays": "France",
         "longitude": "1.099971",
         "latitude": "49.443232",
-        "chaud":false,
+        "chaud":true,
         "froid":true,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain":false,
@@ -570,9 +636,12 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Rouen.jpg",
-        "note": "4,1"
+        "note": "4,1",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 23,
@@ -595,9 +664,12 @@
         "campagne": true,
         "urbain": false,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Carcassonne.jpg",
-        "note": "4,5"
+        "note": "4,5",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 24,
@@ -610,7 +682,7 @@
         "chaud":false,
         "froid":true,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain":false,
@@ -620,9 +692,12 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Tours.jpg",
-        "note": "3,7"
+        "note": "3,7",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 25,
@@ -645,9 +720,12 @@
         "campagne": true,
         "urbain": true,
         "calme": true,
-        "festif":false,
+        "festif":true,
         "img": "../../public/assets/villes/Dijon.jpg",
-        "note": "3,8"
+        "note": "3,8",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 26,
@@ -672,7 +750,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Nancy.jpg",
-        "note": "2,6"
+        "note": "2,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 27,
@@ -697,7 +778,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Amiens.jpg",
-        "note": "3,3"
+        "note": "3,3",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 28,
@@ -722,7 +806,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Metz.jpg",
-        "note": "3,4"
+        "note": "3,4",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 29,
@@ -747,7 +834,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Rouen.jpg",
-        "note": "4,6"
+        "note": "4,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     },
     {
         "id": 30,
@@ -772,7 +862,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Toulon.jpg",
-        "note": "4,1"
+        "note": "4,1",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 31,
@@ -797,7 +890,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Pau.jpg",
-        "note": "2,6"
+        "note": "2,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 32,
@@ -822,7 +918,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Angers.jpg.webp",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 33,
@@ -847,7 +946,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Perpignan.jpeg",
-        "note": "3,5"
+        "note": "3,5",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 34,
@@ -872,7 +974,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/LaRochelle.jpg",
-        "note": "4,7"
+        "note": "4,7",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 35,
@@ -897,7 +1002,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Antibes.jpg",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 36,
@@ -922,7 +1030,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Saint-Paul-de-Vence.jpg",
-        "note": "4,6"
+        "note": "4,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
 
     }, 
     {
@@ -948,7 +1059,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/LeHavre.jpg",
-        "note": "3,8"
+        "note": "3,8",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 38,
@@ -973,7 +1087,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Nimes.jpg",
-        "note": "3,4"
+        "note": "3,4",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 39,
@@ -998,7 +1115,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Brest.jpg",
-        "note": "3,2"
+        "note": "3,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 40,
@@ -1023,7 +1143,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Limoges.jpg",
-        "note": "3,5"
+        "note": "3,5",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 41,
@@ -1048,7 +1171,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Mulhouse.jpg.webp",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 42,
@@ -1073,7 +1199,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/SaintDenis.jpg",
-        "note": "4,2"
+        "note": "4,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 43,
@@ -1098,7 +1227,10 @@
         "calme": false,
         "festif":true,
         "img": "../../public/assets/villes/Orleans.jpg",
-        "note": "4,6"
+        "note": "4,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 44,
@@ -1123,7 +1255,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Besancon.jpg",
-        "note": "2,8"
+        "note": "2,8",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 45,
@@ -1148,7 +1283,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Caen.jpg",
-        "note": "3,2"
+        "note": "3,2",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 46,
@@ -1173,7 +1311,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Poitiers.jpg",
-        "note": "4,1"
+        "note": "4,1",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 47,
@@ -1198,7 +1339,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Troyes.jpeg",
-        "note": "4,1"
+        "note": "4,1",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 48,
@@ -1223,7 +1367,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Aix-les-Bains.jpg",
-        "note": "2,5"
+        "note": "2,5",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 49,
@@ -1248,7 +1395,10 @@
         "calme": true,
         "festif":true,
         "img": "../../public/assets/villes/Chamonix-Mont-Blanc.png",
-        "note": "4,8"
+        "note": "4,8",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 50,
@@ -1273,7 +1423,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Ouessant.jpg",
-        "note": "3,5"
+        "note": "3,5",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 51,
@@ -1298,7 +1451,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Larzac.jpg",
-        "note": "4,6"
+        "note": "4,6",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 52,
@@ -1323,7 +1479,10 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/Saulieu.jpg",
-        "note": "4,3"
+        "note": "4,3",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }, 
     {
         "id": 53,
@@ -1348,6 +1507,9 @@
         "calme": true,
         "festif":false,
         "img": "../../public/assets/villes/CansEtCevennes.jpg",
-        "note": "4,7"
+        "note": "4,7",
+        "touristique": true,
+        "tempere":true, 
+        "périurbaine":false
     }
 ]
