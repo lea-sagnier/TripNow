@@ -10,7 +10,6 @@ import StepperOnboarding from "../../components/StepperOnboarding";
 const Onboarding: React.FC = () => {
     return (
         <IonPage>
-        <IonHeader></IonHeader>
         <IonContent>
                 <StepperOnboarding/>
         </IonContent>

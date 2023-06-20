@@ -54,11 +54,6 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle size="large">Où allez-vous ?</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen className="ion-padding">
         <h1 className="homepageTitle">Où allez-vous ?
           <IonButton className="btn-icon" fill="clear" href="./wishlist">

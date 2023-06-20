@@ -80,7 +80,6 @@ const Register: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader></IonHeader>
       <IonContent>
         <section>
           <div>

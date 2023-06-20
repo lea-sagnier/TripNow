@@ -63,11 +63,6 @@ const User: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>User</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
         <section className="userpage">
           <h1>{displayName}</h1>

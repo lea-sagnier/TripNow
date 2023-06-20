@@ -52,7 +52,6 @@ const Login: React.FC = () => {
         <Loader /> // Affichez le Loader si loading est true
       ) : (
         <IonPage>
-          <IonHeader></IonHeader>
           <IonContent>
             <section>
               <h1>Se connecter</h1>

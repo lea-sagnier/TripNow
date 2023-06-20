@@ -77,11 +77,6 @@ const App: React.FC = () => {
   }
   return (
   <IonApp>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>TripNow</IonTitle>
-      </IonToolbar>
-    </IonHeader>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>

@@ -58,11 +58,6 @@ const Wishlist: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle size="large">Wishlist</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen className="ion-padding">
         <div className="btn-navigation">
           <IonButton fill="clear" className="btn-icon" href="./home">
