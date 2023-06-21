@@ -4,9 +4,10 @@ import { SearchStepper } from "../../components/SearchStepper"
 export const SearchQuestions = () => {
     return (
         <IonPage>
-        <IonHeader></IonHeader>
-        <IonContent className="ion-padding">
-            <SearchStepper/>
+        <IonContent fullscreen>
+            <section>
+                <SearchStepper/>
+            </section>
         </IonContent>
         </IonPage>
     )

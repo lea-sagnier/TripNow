@@ -290,9 +290,11 @@ ion-input{
 }
 
 .monthIonCard {
-    width: fit-content;
+    width: inherit;
     margin-bottom: 0;
     margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .monthText {

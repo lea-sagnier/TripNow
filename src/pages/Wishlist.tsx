@@ -61,7 +61,12 @@ const Wishlist: React.FC = () => {
       <IonContent fullscreen className="ion-padding">
         <div className="btn-navigation">
           <IonButton fill="clear" className="btn-icon" href="./home">
-            <IonIcon slot="icon-only" aria-hidden="true" icon={chevronBackOutline} />
+            <IonIcon
+              className="back-btn"
+              slot="icon-only"
+              aria-hidden="true"
+              icon={chevronBackOutline}
+            />
           </IonButton>
           <IonButton fill="clear" className="btn-icon btn-chevron">
             <IonIcon slot="icon-only" aria-hidden="true" icon={heart} />
@@ -73,11 +78,7 @@ const Wishlist: React.FC = () => {
               Aucune destination dans votre liste de souhait. Il est temps de
               faire des découvertes !
             </span>
-            <IonButton
-              onClick={onNavigate}
-            >
-              Découvrir
-            </IonButton>
+            <IonButton onClick={onNavigate}>Découvrir</IonButton>
           </>
         ) : (
           <IonList>
