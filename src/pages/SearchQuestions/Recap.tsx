@@ -28,8 +28,8 @@ export const Recap = () => {
             <IonPage>
                 <IonContent fullscreen>
                     <section>
-                    <div className="recapContainer">
-                        <h1 className="stepperHeaderTitle">Récapitulatif</h1>
+                    <div>
+                        <h1 className="display">Récapitulatif</h1>
                         <div className="recapInformations">
                             { choices.choice1 && 
                                 <p className="recapTexte">
