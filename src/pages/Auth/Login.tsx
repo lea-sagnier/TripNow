@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   IonButton,
   IonContent,
-  IonHeader,
   IonInput,
   IonPage,
   IonIcon,
@@ -11,7 +10,6 @@ import {
 import { Link, useHistory } from "react-router-dom";
 import {
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { chevronBackOutline, eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";

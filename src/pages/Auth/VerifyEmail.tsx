@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonButton, IonContent, IonPage } from "@ionic/react";
 import { sendEmailVerification } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { auth } from "../../firebaseConfig";
