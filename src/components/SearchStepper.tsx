@@ -156,8 +156,12 @@ export const SearchStepper: React.FC = () => {
   const handlePreviousStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
+      setDisabled(false)
     }
-    setDisabled(false);
+
+    if(currentStep === 0){
+      history.push("/search")
+    }
   };
 
   return (

@@ -80,6 +80,9 @@ const App: React.FC = () => {
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route exact path="/home">
             <Home />
           </Route>
