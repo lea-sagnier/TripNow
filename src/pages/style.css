@@ -427,3 +427,6 @@ ion-icon.back-btn{
 .importantText {
     color : var(--style-blue)
 }
+.active-btn {
+    background-color: red;
+  }
