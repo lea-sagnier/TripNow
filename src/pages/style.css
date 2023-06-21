@@ -361,13 +361,21 @@ ion-icon.back-btn{
 
 .stepperHeader {
     display: flex;
-    align-items: center;
-    gap: 6rem;
+    align-items: flex-start;
+    gap: 3rem;
 }
 
 .stepperHeaderTitle {
     font-weight: 900;
     font-size: 32px;  
+    text-align: center;
+}
+
+.stepperHeaderSubtitle {
+    font-weight: 500;
+    font-size: 14px;  
+    text-align: center;
+    padding: 10px 0;
 }
 
 .stepperQuestionTitle {
@@ -399,4 +407,23 @@ ion-icon.back-btn{
     flex-direction: column;
     height: 80%;
     justify-content: space-between;
+}
+/* Recap */
+
+.recapContainer {
+    margin-top: 4rem;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.recapTexte {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.importantText {
+    color : var(--style-blue)
 }
