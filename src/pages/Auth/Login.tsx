@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import {
   IonButton,
   IonContent,
-  IonHeader,
   IonInput,
   IonPage,
   IonIcon,
@@ -11,10 +10,9 @@ import {
 import { Link, useHistory } from "react-router-dom";
 import {
   signInWithEmailAndPassword,
-  GoogleAuthProvider,
 } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
-import { eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
+import { chevronBackOutline, eyeOffOutline, eyeOutline, mailOutline } from "ionicons/icons";
 import "../style.css";
 import Loader from "../../components/Loader";
 
@@ -52,17 +50,19 @@ const Login: React.FC = () => {
         <Loader /> // Affichez le Loader si loading est true
       ) : (
         <IonPage>
-          <IonHeader></IonHeader>
           <IonContent>
             <section>
-              <h1>Se connecter</h1>
+              <IonButton fill="clear" className="btn-icon" href="./onboarding">
+                <IonIcon className="back-btn" slot="icon-only" aria-hidden="true" icon={chevronBackOutline} />
+              </IonButton>
+              <h1 className="display">Se connecter</h1>
               <form
                 onSubmit={(e) => {
                   e.preventDefault();
                   logIn();
                 }}
               >
-                <div>
+                <div className="d-flex">
                   <IonLabel position="stacked">Adresse mail</IonLabel>
                   <div className="input-icon">
                     <IonInput
@@ -98,9 +98,12 @@ const Login: React.FC = () => {
 
                 <IonButton type="submit">Se connecter</IonButton>
               </form>
+                    <div  className="pt-1">
+
               <IonButton fill="clear" href="/register">
                 S'inscrire
               </IonButton>
+                    </div>
             </section>
           </IonContent>
         </IonPage>

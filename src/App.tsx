@@ -8,9 +8,6 @@ import {
   IonTabButton,
   IonTabs,
   setupIonicReact,
-  IonToolbar, 
-  IonHeader,
-  IonTitle
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { homeOutline, searchOutline, personCircleOutline, mapOutline } from 'ionicons/icons';
@@ -61,7 +58,7 @@ const App: React.FC = () => {
             <Route exact path="/">
               <Start />
             </Route>
-            <Route exact path="/onboarding">
+            <Route path="/onboarding">
               <Onboarding />
             </Route>
              <Route path="/login">
@@ -80,11 +77,6 @@ const App: React.FC = () => {
   }
   return (
   <IonApp>
-    <IonHeader>
-      <IonToolbar>
-        <IonTitle>TripNow</IonTitle>
-      </IonToolbar>
-    </IonHeader>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>

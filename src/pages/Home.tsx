@@ -2,6 +2,8 @@ import {
   IonButton,
   IonCard,
   IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
   IonContent,
   IonHeader,
   IonIcon,
@@ -15,7 +17,7 @@ import HistoryPage from "./User/HistoryPage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.css";
 import * as data from "../data/villes-france.json";
-import { heart} from "ionicons/icons";
+import { heart, locationOutline, star } from "ionicons/icons";
 import { useEffect, useState } from 'react';
 import { CitiesSwiper } from "./CitiesSwiper";
 
@@ -52,13 +54,8 @@ const Home: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle size="large">Où allez-vous ?</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen className="ion-padding">
-        <h1 className="homepageTitle">Où allez-vous ?
+        <h1 className="display">Où allez-vous ?
           <IonButton className="btn-icon" fill="clear" href="./wishlist">
             <IonIcon slot="icon-only" aria-hidden="true" icon={heart} />
           </IonButton>

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import {
   IonContent,
-  IonHeader,
   IonInput,
   IonPage,
-  IonImg,
   IonModal,
   IonText,
   IonButton,
@@ -40,7 +38,6 @@ const ResetPassword: React.FC = () => {
   return (
     //Page de réinitialisation du mot de passe
     <IonPage>
-      <IonHeader></IonHeader>
       <IonContent>
         <section className="log-home">
           {/* <IonImg

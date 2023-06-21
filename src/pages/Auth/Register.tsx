@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import {
   IonButton,
   IonContent,
-  IonHeader,
   IonIcon,
   IonInput,
   IonLabel,
   IonPage,
 } from "@ionic/react";
-import { eyeOutline, eyeOffOutline } from "ionicons/icons";
+import { eyeOutline, eyeOffOutline, chevronBackOutline } from "ionicons/icons";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import { useHistory } from "react-router-dom";
@@ -80,84 +79,77 @@ const Register: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader></IonHeader>
       <IonContent>
         <section>
-          <div>
-            <h2>S'inscrire</h2>
-            <p>
-              Votre nom d’utilisateur sera visible sur votre profil, vos
-              annonces ... Vous pourrez le modifier quand bon vous semble
-            </p>
-            <IonLabel>Pseudo</IonLabel>
-            <IonInput
-              placeholder="Pseudo"
-              value={displayName}
-              onIonInput={(e) => setDisplayName(e.detail.value!)}
+          <IonButton fill="clear" className="btn-icon" href="./onboarding">
+            <IonIcon
+              className="back-btn"
+              slot="icon-only"
+              aria-hidden="true"
+              icon={chevronBackOutline}
             />
-          </div>
+          </IonButton>
 
-          <div>
-            <h2>Adresse email</h2>
-            <p>
-              Optimiser votre envie de voyager en nous rejoignant. La création
-              d’un compte vous permettra de retrouver toutes nos propositions de
-              voyage à votre gout !
-            </p>
-            <IonLabel>Votre email</IonLabel>
-            <IonInput
-              required
-              placeholder="exemple@gmail.com"
-              value={email}
-              onIonInput={(e) => {
-                setEmail(e.detail.value!);
-                validateMail(e.detail.value!);
-              }}
-            />
-          </div>
-
-          <div>
-            <h2>Définissez votre mot de passe</h2>
-            <p>
-              Votre mot de passe doit contenir au moins 12 caractères dont une
-              majuscule, une minuscule, un chiffre et un caractère spécial parmi
-              !@#$%^&)(+=._-
-            </p>
-            <IonLabel>Mot de passe</IonLabel>
-            <div className="input-icon">
+          <h1 className="display">S'inscrire</h1>
+          <div className="form-register">
+            <div>
+              <IonLabel>Pseudo</IonLabel>
+              <IonInput
+                placeholder="Exemple59"
+                value={displayName}
+                onIonInput={(e) => setDisplayName(e.detail.value!)}
+              />
+              <IonLabel>Adresse email*</IonLabel>
               <IonInput
                 required
-                type={showPassword ? "text" : "password"}
-                value={password}
+                placeholder="exemple@gmail.com"
+                value={email}
                 onIonInput={(e) => {
-                  setPassword(e.detail.value!);
-                  validatePassword(e.detail.value!);
+                  setEmail(e.detail.value!);
+                  validateMail(e.detail.value!);
                 }}
               />
-              <IonIcon
-                className="password-toggle-icon"
-                icon={showPassword ? eyeOffOutline : eyeOutline}
-                onClick={() => setShowPassword(!showPassword)}
-              />
-            </div>
+              <IonLabel>Mot de passe*</IonLabel>
+              <div className="input-icon">
+                <IonInput
+                  required
+                  type={showPassword ? "text" : "password"}
+                  value={password}
+                  onIonInput={(e) => {
+                    setPassword(e.detail.value!);
+                    validatePassword(e.detail.value!);
+                  }}
+                />
+                <IonIcon
+                  className="password-toggle-icon"
+                  icon={showPassword ? eyeOffOutline : eyeOutline}
+                  onClick={() => setShowPassword(!showPassword)}
+                />
+              </div>
 
-            <IonLabel>Confirmation du mot de passe</IonLabel>
-            <div className="input-icon">
-              <IonInput
-                required
-                type={showCPassword ? "text" : "password"}
-                value={cpassword}
-                onIonInput={(e) => setCPassword(e.detail.value!)}
-              />
-              <IonIcon
-                className="password-toggle-icon"
-                icon={showCPassword ? eyeOffOutline : eyeOutline}
-                onClick={() => setShowCPassword(!showCPassword)}
-              />
+              <IonLabel>Confirmation du mot de passe</IonLabel>
+              <div className="input-icon">
+                <IonInput
+                  required
+                  type={showCPassword ? "text" : "password"}
+                  value={cpassword}
+                  onIonInput={(e) => setCPassword(e.detail.value!)}
+                />
+                <IonIcon
+                  className="password-toggle-icon"
+                  icon={showCPassword ? eyeOffOutline : eyeOutline}
+                  onClick={() => setShowCPassword(!showCPassword)}
+                />
+              </div>
+              {errorMessage && <p className="error-message">{errorMessage}</p>}
+            </div>
+            <div className="d-flex">
+              <IonButton onClick={handleRegister}>S'incrire</IonButton>
+              <IonButton fill="clear" href="./login">
+                Se connecter
+              </IonButton>
             </div>
           </div>
-          {errorMessage && <p className="error-message">{errorMessage}</p>}
-          <IonButton onClick={handleRegister}>S'incrire</IonButton>
         </section>
       </IonContent>
     </IonPage>

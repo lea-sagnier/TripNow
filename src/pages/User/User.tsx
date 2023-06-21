@@ -63,13 +63,8 @@ const User: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>User</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
-        <section>
+        <section className="userpage">
           <h1>{displayName}</h1>
 
           {/* <IonInput onIonInput={(e: any) => setDisplayName(e.target.value)} />
