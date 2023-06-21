@@ -1,4 +1,4 @@
-import { IonButton, IonContent, IonHeader, IonPage, IonTitle } from "@ionic/react"
+import { IonButton, IonContent, IonPage } from "@ionic/react"
 import { useHistory, useLocation } from "react-router";
 
 export const Recap = () => {
@@ -26,8 +26,8 @@ export const Recap = () => {
 
         return (
             <IonPage>
-                <IonHeader></IonHeader>
-                <IonContent className="ion-padding">
+                <IonContent fullscreen>
+                    <section>
                     <div className="recapContainer">
                         <h1 className="stepperHeaderTitle">Récapitulatif</h1>
                         <div className="recapInformations">
@@ -52,6 +52,7 @@ export const Recap = () => {
                             </IonButton>
                         </div>
                     </div>
+                    </section>
                 </IonContent>
                 </IonPage>
             )
