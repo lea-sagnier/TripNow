@@ -738,7 +738,7 @@
         "chaud":false,
         "froid":true,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": true,
         "plusieur":true,
         "contemporain":true,
@@ -835,7 +835,7 @@
         "festif":true,
         "img": "../../public/assets/villes/Rouen.jpg",
         "note": "4,6",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     },
@@ -878,7 +878,7 @@
         "chaud":true,
         "froid":false,
         "detente": true,
-        "aventure":false,
+        "aventure":true,
         "seul": false,
         "plusieur":true,
         "contemporain":false,
@@ -891,7 +891,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Pau.jpg",
         "note": "2,6",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }, 
@@ -903,8 +903,8 @@
         "pays": "France",
         "longitude": "-0.563166",
         "latitude": "47.478419",
-        "chaud":false,
-        "froid":true,
+        "chaud":true,
+        "froid":false,
         "detente": true,
         "aventure":false,
         "seul": false,
@@ -919,7 +919,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Angers.jpg.webp",
         "note": "4,2",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }, 
@@ -1031,7 +1031,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Saint-Paul-de-Vence.jpg",
         "note": "4,6",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
 
@@ -1312,7 +1312,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Poitiers.jpg",
         "note": "4,1",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }, 
@@ -1340,7 +1340,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Troyes.jpeg",
         "note": "4,1",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }, 
@@ -1452,7 +1452,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Larzac.jpg",
         "note": "4,6",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }, 
@@ -1480,7 +1480,7 @@
         "festif":false,
         "img": "../../public/assets/villes/Saulieu.jpg",
         "note": "4,3",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }, 
@@ -1508,7 +1508,7 @@
         "festif":false,
         "img": "../../public/assets/villes/CansEtCevennes.jpg",
         "note": "4,7",
-        "touristique": true,
+        "touristique": false,
         "tempere":true, 
         "périurbaine":false
     }
