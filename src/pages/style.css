@@ -9,9 +9,12 @@
   }
   *{
     --ion-color-primary: var(--style-blue); /* Couleur primaire */
+    --ion-color-secondary: var(--style-blue-light);
     --ion-color-primary-shade: var(--dark-slate-grey);
     --ion-color-primary-tint:var(--dark-slate-grey);
+    --ion-color-secondary-contrast:var(--black);
     --style-blue :#1B9AAA;
+    --style-blue-light: #E8F5F7;
     --white: #ffffff ;
     --black: #001011;
     --dark-slate-grey: #304748;
@@ -324,4 +327,45 @@ ion-button{
 .btn-navigation{
     display: flex;
     justify-content: space-between ;
+}
+
+/* search stepper */
+
+.stepperSearch {
+    margin-top: 5rem;
+}
+
+.stepperHeader {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+
+.stepperHeaderTitle {
+    font-weight: 900;
+    font-size: 32px;  
+}
+
+.stepperQuestionTitle {
+    padding: 1rem 0;
+    font-weight: 700;
+    font-size: 24px;  
+}
+
+.questionsButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+.questionsButton {
+    padding-top: 1rem;
+    height: 4rem;
+    color: var(--black) !important;
+}
+
+.choiceInformations {
+    color: var(--dark-slate-grey);
+    font-size: 12px;
+    font-weight: 500;
+    margin: 8px;
 }
