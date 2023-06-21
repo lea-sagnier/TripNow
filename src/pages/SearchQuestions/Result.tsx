@@ -8,6 +8,14 @@ export const Result = () => {
         // @ts-expect-error
         const results = location.state.params.result;
 
+        const getResults = () => {
+            const result = []
+            for(let i=0; i<5; i++){
+                result.push(<p key={results[i].ville}>{results[i].ville}</p>)
+            }
+            return result
+        }
+
         return (
             <IonPage>
                 <IonHeader></IonHeader>
@@ -17,7 +25,10 @@ export const Result = () => {
                         <div className="recapInformations">
                             {
                                 results.length > 0 ? 
-                                    results.map((city: any) => <p key={city.ville}>{city.ville}</p>) 
+                                    results.length > 5 ? 
+                                        getResults()
+                                        :
+                                        results.map((city: any) => <p key={city.ville}>{city.ville}</p>) 
                                     :
                                     <p>Aucune ville ne correspond à vos recherches</p>
                             }           
