@@ -41,12 +41,10 @@ const Wishlist: React.FC = () => {
         history.id = doc.id;
         return history;
       });
-      console.log(historyLists);
       return historyLists;
     }
     async function fetchHistory() {
       const histories = await getHistory();
-      console.log(histories);
       setWishlist(histories);
     }
     fetchHistory();

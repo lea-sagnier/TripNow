@@ -36,12 +36,10 @@ import {
           histroy.id = doc.id;
           return histroy;
         });
-        console.log(historyLists)
         return historyLists;
       }
       async function fetchHistory() {
         const histories = await getHistory();
-        console.log(histories)
         setHistory(histories);
       }
       fetchHistory();

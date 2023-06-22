@@ -4,10 +4,9 @@ import { useHistory } from "react-router";
 
 const Search: React.FC = () => {
   const navigate = useHistory();
-
   const onNavigate = () => {
-    navigate.push("/form");
-  };
+      navigate.push("/form");
+    }
 
   return (
     <IonPage>
@@ -33,3 +32,4 @@ const Search: React.FC = () => {
 };
 
 export default Search;
+

@@ -72,7 +72,6 @@ const Stepper: React.FC = () => {
           .catch((error) => {
             console.error("Erreur lors de l'ajout du pseudo", error);
           });
-        console.log(user);
         history.push("/verifyEmail");
       })
       .catch((error) => {

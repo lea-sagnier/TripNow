@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IonButton, IonIcon, IonImg } from "@ionic/react";
 import { useHistory } from "react-router-dom";
 import { chevronBackOutline, star, sunny } from "ionicons/icons";
@@ -8,7 +8,8 @@ type Choice = {
   data: string;
   text: string;
 };
-export const SearchStepper: React.FC = () => {
+
+export const SearchStepper: React.FC  = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const history = useHistory();
   const [result, setResult] = useState<any[]>([]);
@@ -27,30 +28,30 @@ export const SearchStepper: React.FC = () => {
   const [activeButton5, setActiveButton5] = useState(null);
   const [activeButton6, setActiveButton6] = useState(null);
   const [activeButton7, setActiveButton7] = useState(null);
-
+ 
   // convert JSON data to an array
   const allCitiesInfomations = JSON.parse(JSON.stringify(data)).default;
-  const handleBtnClick = (button:any) =>{
+  const handleBtnClick = (button: any) => {
     setActiveButton(button);
-  }
-  const handleBtnClick2 = (button:any) =>{
+  };
+  const handleBtnClick2 = (button: any) => {
     setActiveButton2(button);
-  }
-  const handleBtnClick3 = (button:any) =>{
+  };
+  const handleBtnClick3 = (button: any) => {
     setActiveButton3(button);
-  }
-  const handleBtnClick4 = (button:any) =>{
+  };
+  const handleBtnClick4 = (button: any) => {
     setActiveButton4(button);
-  }
-  const handleBtnClick5 = (button:any) =>{
+  };
+  const handleBtnClick5 = (button: any) => {
     setActiveButton5(button);
-  }
-  const handleBtnClick6 = (button:any) =>{
+  };
+  const handleBtnClick6 = (button: any) => {
     setActiveButton6(button);
-  }
-  const handleBtnClick7 = (button:any) =>{
+  };
+  const handleBtnClick7 = (button: any) => {
     setActiveButton7(button);
-  }
+  };
   const handleNextStep = () => {
     if (currentStep === 0) {
       let tmpResult = [];
@@ -156,11 +157,11 @@ export const SearchStepper: React.FC = () => {
   const handlePreviousStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
-      setDisabled(false)
+      setDisabled(false);
     }
 
-    if(currentStep === 0){
-      history.push("/search")
+    if (currentStep === 0) {
+      history.push("/search");
     }
   };
 
@@ -192,7 +193,7 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">Je recherche...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice1({
@@ -200,29 +201,29 @@ export const SearchStepper: React.FC = () => {
                       text: "un endroit ensoleillé",
                     }),
                       setDisabled(false);
-                      handleBtnClick('button1')
+                    handleBtnClick("button1");
                   }}
                 >
                   ☀️ Un endroit ensoleillé
                 </IonButton>
                 <IonButton
-                  color={activeButton === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice1({ data: "tempéré", text: "un endroit tempéré" }),
                       setDisabled(false);
-                      handleBtnClick('button2')
+                    handleBtnClick("button2");
                   }}
                 >
                   ☁️ Un endroit tempéré
                 </IonButton>
                 <IonButton
-                  color={activeButton === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice1({ data: "froid", text: "un endroit froid" });
                     setDisabled(false);
-                    handleBtnClick('button3')
+                    handleBtnClick("button3");
                   }}
                 >
                   ❄️ Une destination froide
@@ -257,7 +258,7 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">Je voudrais...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton2 === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton2 === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice2({
@@ -265,25 +266,24 @@ export const SearchStepper: React.FC = () => {
                       text: "être dans la nature",
                     }),
                       setDisabled(false);
-                      handleBtnClick2('button1')
+                    handleBtnClick2("button1");
                   }}
                 >
                   🌱 Etre dans la nature
                 </IonButton>
                 <IonButton
-                  color={activeButton2 === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton2 === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice2({ data: "urbain", text: "être en ville" }),
                       setDisabled(false);
-                      handleBtnClick2('button2')
-
+                    handleBtnClick2("button2");
                   }}
                 >
                   🌆 Etre en ville
                 </IonButton>
                 <IonButton
-                  color={activeButton2 === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton2 === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice2({
@@ -291,7 +291,7 @@ export const SearchStepper: React.FC = () => {
                       text: "visiter des lieux",
                     }),
                       setDisabled(false);
-                      handleBtnClick2('button3')
+                    handleBtnClick2("button3");
                   }}
                 >
                   🏛️ Visiter des lieux
@@ -326,7 +326,7 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">J'aimerais...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton3 === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton3 === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice3({
@@ -334,8 +334,7 @@ export const SearchStepper: React.FC = () => {
                       text: "un lieu calme et isolé",
                     }),
                       setDisabled(false);
-                      handleBtnClick3('button1')
-
+                    handleBtnClick3("button1");
                   }}
                 >
                   🤫 Un lieu calme et isolé
@@ -346,7 +345,7 @@ export const SearchStepper: React.FC = () => {
                   relaxante ?
                 </p>
                 <IonButton
-                  color={activeButton3 === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton3 === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice3({
@@ -354,7 +353,7 @@ export const SearchStepper: React.FC = () => {
                       text: "un équilibre entre nature et ville",
                     }),
                       setDisabled(false);
-                      handleBtnClick3('button2')
+                    handleBtnClick3("button2");
                   }}
                 >
                   🌳 Un équilibre entre nature et ville
@@ -365,7 +364,7 @@ export const SearchStepper: React.FC = () => {
                   sérénité de la nature et l'animation des villes ?
                 </p>
                 <IonButton
-                  color={activeButton3 === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton3 === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice3({
@@ -373,7 +372,7 @@ export const SearchStepper: React.FC = () => {
                       text: "une vie urbaine animée",
                     }),
                       setDisabled(false);
-                      handleBtnClick3('button3')
+                    handleBtnClick3("button3");
                   }}
                 >
                   🥳 Une vie urbaine animée
@@ -413,12 +412,12 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">J'aimerais...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton4 === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton4 === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice4({ data: "court", text: "d'une durée courte" }),
                       setDisabled(false);
-                      handleBtnClick4('button1')
+                    handleBtnClick4("button1");
                   }}
                 >
                   🕐 Rester un court séjour
@@ -427,12 +426,12 @@ export const SearchStepper: React.FC = () => {
                   Quelques jours seulement, profiter d'une pause rapide.{" "}
                 </p>
                 <IonButton
-                  color={activeButton4 === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton4 === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice4({ data: "moyen", text: "d'une durée moyenne" }),
                       setDisabled(false);
-                      handleBtnClick4('button2')
+                    handleBtnClick4("button2");
                   }}
                 >
                   🕒 Rester une durée moyenne
@@ -442,12 +441,12 @@ export const SearchStepper: React.FC = () => {
                   destination.
                 </p>
                 <IonButton
-                  color={activeButton4 === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton4 === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice4({ data: "moyen", text: "d'une longue durée" }),
                       setDisabled(false);
-                      handleBtnClick4('button3')
+                    handleBtnClick4("button3");
                   }}
                 >
                   🕕 Avoir un long séjour
@@ -486,34 +485,34 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">Je voyage...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton5 === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton5 === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice5({ data: "solitaire", text: "seul" }),
                       setDisabled(false);
-                      handleBtnClick5('button1')
+                    handleBtnClick5("button1");
                   }}
                 >
                   👤 En solitaire
                 </IonButton>
                 <IonButton
-                  color={activeButton5 === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton5 === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice5({ data: "couple", text: "en couple" }),
                       setDisabled(false);
-                      handleBtnClick5('button2')
+                    handleBtnClick5("button2");
                   }}
                 >
                   👥 En couple
                 </IonButton>
                 <IonButton
-                  color={activeButton5 === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton5 === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice5({ data: "groupe", text: "entre amis" }),
                       setDisabled(false);
-                      handleBtnClick5('button3')
+                    handleBtnClick5("button3");
                   }}
                 >
                   👥 En groupe
@@ -553,7 +552,7 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">Je voudrais faire...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton6 === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton6 === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice6({
@@ -561,8 +560,7 @@ export const SearchStepper: React.FC = () => {
                       text: "aventures sportives",
                     }),
                       setDisabled(false);
-                      handleBtnClick6('button1')
-
+                    handleBtnClick6("button1");
                   }}
                 >
                   ⚽️ Des aventures sportives
@@ -572,7 +570,7 @@ export const SearchStepper: React.FC = () => {
                   la plongée sous-marine, le ski ou d'autres activités fortes ?
                 </p>
                 <IonButton
-                  color={activeButton6 === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton6 === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice6({
@@ -580,7 +578,7 @@ export const SearchStepper: React.FC = () => {
                       text: "activités relaxantes",
                     }),
                       setDisabled(false);
-                      handleBtnClick6('button2')
+                    handleBtnClick6("button2");
                   }}
                 >
                   🛏️ Des activités relaxantes
@@ -591,7 +589,7 @@ export const SearchStepper: React.FC = () => {
                   lieux ?
                 </p>
                 <IonButton
-                  color={activeButton6 === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton6 === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice6({
@@ -599,7 +597,7 @@ export const SearchStepper: React.FC = () => {
                       text: "des explorations culturelles",
                     }),
                       setDisabled(false);
-                      handleBtnClick6('button3')
+                    handleBtnClick6("button3");
                   }}
                 >
                   🗽 Des explorations culturelles
@@ -639,7 +637,7 @@ export const SearchStepper: React.FC = () => {
               <h1 className="stepperQuestionTitle">J'ai un budget...</h1>
               <div className="questionsButtons">
                 <IonButton
-                  color={activeButton7 === 'button1' ? 'primary' : 'secondary'}
+                  color={activeButton7 === "button1" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice7({
@@ -647,32 +645,29 @@ export const SearchStepper: React.FC = () => {
                       text: "budget économique",
                     }),
                       setDisabled(false);
-                      handleBtnClick7('button1')
-
+                    handleBtnClick7("button1");
                   }}
                 >
                   💵 Economique
                 </IonButton>
                 <IonButton
-                  color={activeButton7 === 'button2' ? 'primary' : 'secondary'}
+                  color={activeButton7 === "button2" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice7({ data: "budgetMoyen", text: "budget moyen" }),
                       setDisabled(false);
-                      handleBtnClick7('button2')
-
+                    handleBtnClick7("button2");
                   }}
                 >
                   💸 Moyen
                 </IonButton>
                 <IonButton
-                  color={activeButton7 === 'button3' ? 'primary' : 'secondary'}
+                  color={activeButton7 === "button3" ? "primary" : "secondary"}
                   className="questionsButton"
                   onClick={() => {
                     setChoice7({ data: "élevé", text: "budget élevé" }),
                       setDisabled(false);
-                      handleBtnClick7('button3')
-
+                    handleBtnClick7("button3");
                   }}
                 >
                   💰 Elevé
