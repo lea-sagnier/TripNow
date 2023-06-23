@@ -434,3 +434,10 @@ ion-icon.back-btn{
   .result-img{
     width: 100%;
   }
+
+  .justify-between{
+    justify-content: space-between;
+  }
+  .mail-size{
+    font-size: 1.2rem;
+  }

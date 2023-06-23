@@ -58,9 +58,12 @@ export const VerifyEmail = () => {
   return (
     <IonPage>
       <IonContent>
-        <section>
-          <h1>Avant tout, voulez vous vérifiez votre Email ? </h1>
-          <p>{currentUser?.email}</p>
+        <section className="d-flex justify-between">
+          <div>
+          <h1 className="display">Avant tout, voulez vous vérifiez votre Email ? </h1>
+          <p className="mail-size">{currentUser?.email}</p>
+          </div>
+          <div>
           {clickEmail ? (
             <IonButton onClick={resendEmailVerification} disabled={timeActive}>
               Renvoyer le mail {timeActive && time}
@@ -73,6 +76,7 @@ export const VerifyEmail = () => {
           <IonButton fill="clear" href="./home">
             Passer
           </IonButton>
+          </div>
         </section>
       </IonContent>
     </IonPage>
