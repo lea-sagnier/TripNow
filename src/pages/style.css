@@ -430,3 +430,7 @@ ion-icon.back-btn{
 .active-btn {
     background-color: red;
   }
+
+  .result-img{
+    width: 100%;
+  }
